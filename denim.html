@@ -6,21 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/main.css">
-    <title>L&S | Official Website</title>
+    <link rel="stylesheet" href="css/denim.css">
+    <title>Denim. All Products | L&S</title>
 </head>
 
 <body>
     <div id="header">
         <div class="logo">
-            <a href="#" class="logo">
-                <img src="./img/logo.png">
+            <a href="index.html" class="logo">
+                <img src="./img/favicon.png">
                 LYCO&SHINE
             </a>
         </div>
         <ul id="nav">
-            <li><a href="denim.html">EYEWEAR</a>
+            <li><a href="">EYEWEAR</a>
                 <ul class="sub-nav">
                     <li><a href="">All Eyewear</a>
                     <li><a href="">Women's Eyewear</a>
@@ -28,7 +30,7 @@
                     <li><a href="">Best Sellers</a>
                 </ul>
             </li>
-            <li><a href="denim.html">DENIM</a>
+            <li><a href="">DENIM</a>
                 <ul class="sub-nav">
                     <li><a href="">All Denim</a>
                     <li><a href="">Women's Denim</a>
@@ -36,7 +38,7 @@
                     <li><a href="">#LSxChanel</a>
                 </ul>
             </li>
-            <li><a href="denim.html">COSMETICS</a>
+            <li><a href="">COSMETICS</a>
                 <ul class="sub-nav">
                     <li><a href="">All Cosmetics</a>
                     <li><a href="">Foundation</a>
@@ -46,7 +48,7 @@
                     <li><a href="">Mascara</a>
                 </ul>
             </li>
-            <li><a href="denim.html">ACCESSORIES</a>
+            <li><a href="">ACCESSORIES</a>
                 <ul class="sub-nav">
                     <li><a href="">All Accessories</a>
                     <li><a href="">Hats & Gloves</a>
@@ -55,7 +57,7 @@
                     <li><a href="">Socks</a>
                 </ul>
             </li>
-            <li><a href="denim.html">COLLECTIONS</a>
+            <li><a href="">COLLECTIONS</a>
                 <ul class="sub-nav">
                     <li><a href="">LS World Tour</a>
                     <li><a href="">Fall 2021</a>
@@ -65,14 +67,14 @@
             </li>
             <div class="icon-cart">
                 <a href="./cart.html">
-                    <img src="./img/icon/icon-cart.png">
+                    <img src="./img/icon/icon-cart-black.png">
                     <span class="quantity">2</span>
                 </a>
                 <div class="show-cart">
                     <ul id="list-items-cart">
                         <li class="item-cart">
                             <div class="img-item">
-                                <a href="item.html"><img src="./img/item/GUELL.png"></a>
+                                <a href=""><img src="./img/item/GUELL.png"></a>
                             </div>
                             <div class="desc-item">
                                 <b class="name-item fw600">GUELL (Navy, Men)</b>
@@ -85,7 +87,7 @@
                         </li>
                         <li class="item-cart">
                             <div class="img-item">
-                                <a href="item.html"><img src="./img/item/REINDEER.png"></a>
+                                <a href=""><img src="./img/item/REINDEER.png"></a>
                             </div>
                             <div class="desc-item">
                                 <b class="name-item fw600">REINDEER (Ivory)</b>
@@ -107,117 +109,185 @@
     </div>
     <div class="slider">
         <div class="slogan">
-            <b class="fw600">REFINE YOURSELF, WEAR US</b>
-            <button class="btn-explore">EXPLORE</button>
+            <b class="fw600">All Denim</b>
+            <p>Let Your Denim Do The Walking</p>
         </div>
     </div>
+    <div class="sales-mode">
+        <div class="shipping">
+            <img class="icon" src="./img/icon/icon-freeshipping.png">
+            FREE SHIPPING ON ORDERS $175+
+        </div>
+        <div class="return">
+            <img class="icon" src="./img/icon/icon-return.png">
+            EASY RETURNS IN 90 DAYS
+        </div>
+        <div class="warranty">
+            <img class="icon" src="./img/icon/icon-warranty.png">
+            2 YEARS WARRANTY
+        </div>
+    </div>
+
     <div class="container">
-        <div class="sales-mode">
-            <div class="shipping">
-                <img class="icon" src="./img/icon/icon-freeshipping.png">
-                FREE SHIPPING ON ORDERS $175+
+        <div class="wrapper-btn">
+            <input type="checkbox" name="filter" id="filter">
+            <label for="filter" class="w-filter">
+                <span class="btn-filter">Filter</span>
+                <i class="fas fa-filter"></i>
+            </label>
+            <label for="filter" class="overlay"></label>
+            <div id="bars">
+                <div class="prod-filter">
+                    <h4>Filter</h4>
+                    <label for="filter" class="icon-close">
+                        <img src="./img/icon/close.png">
+                    </label>
+                </div>
+                <ul>
+                    <li>
+                        <p>Type</p>
+                        <img src="./img/icon/arrow-prev-next.png">
+                    </li>
+                    <li>
+                        <p>Size</p>
+                        <img src="./img/icon/arrow-prev-next.png">
+                    </li>
+                    <li>
+                        <p>Color</p>
+                        <img src="./img/icon/arrow-prev-next.png">
+                    </li>
+                    <li>
+                        <p>Material</p>
+                        <img src="./img/icon/arrow-prev-next.png">
+                    </li>
+                    <li>
+                        <p>Collection</p>
+                        <img src="./img/icon/arrow-prev-next.png">
+                    </li>
+                </ul>
+                <div class="btn-bars">
+                    <button class="btn-style">Remove All</button>
+                    <button class="btn-style">Apply</button>
+                </div>
             </div>
-            <div class="return">
-                <img class="icon" src="./img/icon/icon-return.png">
-                EASY RETURNS IN 90 DAYS
-            </div>
-            <div class="warranty">
-                <img class="icon" src="./img/icon/icon-warranty.png">
-                2 YEARS WARRANTY
-            </div>
-        </div>
-        <ul class="categories">
-            <li class="category">EYEWEAR</li>
-            <li class="category">T-SHIRT</li>
-            <li class="category">PANT</li>
-            <li class="category">OUTERWEAR</li>
-        </ul>
-        <div class="favo-items">
-            <h3 class="title">FIND YOUR FAVORITES</h3>
-            <div class="list-items">
-                <a href="item.html" class="item">
-                    <img class="img-product" src="./img/item/Griffith.jpg">
-                    <span class="sale">SALE</span>
-                    <p class="name">GRIFFITH (Ivory)</p>
-                    <b class="price">US $92.40</b>
-                </a>
-                <a href="item.html" class="item">
-                    <img class="img-product" src="./img/item/GUELL.png">
-                    <span class="sale">SALE</span>
-                    <p class="name">GUELL (Navy, Men)</p>
-                    <b class="price">US $131.00</b>
-                </a>
-                <a href="item.html" class="item">
-                    <img class="img-product" src="./img/item/LILAC.png">
-                    <span class="sale">SALE</span>
-                    <p class="name">LILAC</p>
-                    <b class="price">US $144.20</b>
-                </a>
-                <a href="item.html" class="item">
-                    <img class="img-product" src="./img/item/REINDEER.png">
-                    <span class="sale">SALE</span>
-                    <p class="name">REINDEER (Ivory)</p>
-                    <b class="price">US $95.20</b>
-                </a>
-            </div>
-        </div>
-        <div class="whats-new">
-            <p class="title-new">WHAT'S NEW?</p>
-            <div class="slider-new">
-                <img src="./img/banner/banner-new.png">
-                <b class="name-collections">
-                    SPRING/SUMMER 2022
-                    <button class="btn-explore">EXPLORE</button>
-                </b>
+            <div class="w-sort">
+                <select id="sort" aria-label="Sort by">
+                    <option value="0">Sort by</option>
+                    <option value="1">Most popular</option>
+                    <option value="2">Highest price</option>
+                    <option value="3">Lowest price</option>
+                </select>
+                <i class="fas fa-sort icon-sort"></i>
             </div>
         </div>
-        <div class="mix-match">
-            <h3 class="title">MIX AND MATCH</h3>
-            <div class="list-items">
-                <a href="item.html" class="item">
-                    <img class="img-product" src="./img/item/IMG Florence.png">
-                    <p class="name">FLORENCE</p>
-                    <p class="name-desc">(Gold Metal with Green Lens)</p>
-                    <b class="price">US $165.00</b>
-                </a>
-                <a href="item.html" class="item">
-                    <img class="img-product" src="./img/item/IMG STOCKHOLM .png">
-                    <p class="name">STOCKHOLM</p>
-                    <p class="name-desc">(Black&Gold Metal with Green Lens)</p>
-                    <b class="price">US $165.00</b>
-                </a>
-                <a href="item.html" class="item">
-                    <img class="img-product" src="./img/item/IMG FLORENCE Pink.png">
-                    <p class="name">FLORENCE</p>
-                    <p class="name-desc">(Pink Metal With Pink Mirror Lens)</p>
-                    <b class="price">US $189.00</b>
-                </a>
-                <a href="item.html" class="item">
-                    <img class="img-product" src="./img/item/IMG SYDNEY.png">
-                    <p class="name">SYDNEY</p>
-                    <p class="name-desc">(Silver Metal With Gold Mirror Lens)</p>
-                    <b class="price">US $171.00</b>
-                </a>
-            </div>
-        </div>
-        <div class="categories-gender">
-            <div class="for-gender">
-                <img class="img-gender" src="./img/banner/Men.png">
-                <p class="gender-desc">FOR MEN</p>
-                <button class="btn-explore">EXPLORE</button>
-            </div>
-            <div class="for-gender">
-                <img class="img-gender" src="./img/banner/Women.png">
-                <p class="gender-desc">FOR WOMEN</p>
-                <button class="btn-explore">EXPLORE</button>
-            </div>
+        <div class="wrapper-item">
+            <a href="" class="item">
+                <img class="img-product" src="./img/item/serengeti.jpg">
+                <span class="sale">Sale</span>
+                <p class="name">SERENGETI</p>
+                <div class="w-price">
+                    <span class="price">US $133.00</span>
+                    <del>US $152.00</del>
+                </div>
+            </a>
+            <a href="" class="item">
+                <img class="img-product" src="./img/item/LUXEMBOURG.jpg">
+                <span class="sale">Sale</span>
+                <p class="name">LUXEMBOURG</p>
+                <div class="w-price">
+                    <span class="price">US $144.00</span>
+                    <del>US $206.00</del>
+                </div>
+            </a>
+            <a href="" class="item">
+                <img class="img-product" src="./img/item/GUELL-light.jpg">
+                <span class="sale">Sale</span>
+                <p class="name">GUELL (Light Blue, Men)</p>
+                <div class="w-price">
+                    <span class="price">US $92.00</span>
+                    <del>US $131.00</del>
+                </div>
+            </a>
+            <a href="" class="item">
+                <img class="img-product" src="./img/item/jocely.jpg">
+                <span class="sale">New season</span>
+                <p class="name">JOCELYN (Beige)</p>
+                <div class="w-price">
+                    <span class="price">US $413.00</span>
+                </div>
+            </a>
+            <a href="" class="item">
+                <img class="img-product" src="./img/item/abigail.jpg">
+                <span class="sale">New season</span>
+                <p class="name">ABIGAIL (Charcoal)</p>
+                <div class="w-price">
+                    <span class="price">US $127.00</span>
+                </div>
+            </a>
+            <a href="" class="item">
+                <img class="img-product" src="./img/item/bellissa.jpg">
+                <span class="sale">New season</span>
+                <p class="name">BELLISSA (Light Blue)</p>
+                <div class="w-price">
+                    <span class="price">US $206.00</span>
+                </div>
+            </a>
+            <a href="" class="item">
+                <img class="img-product" src="./img/item/amelia.jpg">
+                <span class="sale">New season</span>
+                <p class="name">AMELIA (Grey)</p>
+                <div class="w-price">
+                    <span class="price">US $127.00</span>
+                </div>
+            </a>
+            <a href="" class="item">
+                <img class="img-product" src="./img/item/serengeti.jpg">
+                <span class="sale">Sale</span>
+                <p class="name">SERENGETI</p>
+                <div class="w-price">
+                    <span class="price">US $133.00</span>
+                    <del>US $152.00</del>
+                </div>
+            </a>
+            <a href="" class="item">
+                <img class="img-product" src="./img/item/LUXEMBOURG.jpg">
+                <span class="sale">Sale</span>
+                <p class="name">LUXEMBOURG</p>
+                <div class="w-price">
+                    <span class="price">US $144.00</span>
+                    <del>US $206.00</del>
+                </div>
+            </a>
+            <a href="" class="item">
+                <img class="img-product" src="./img/item/jocely.jpg">
+                <span class="sale">New season</span>
+                <p class="name">JOCELYN (Beige)</p>
+                <div class="w-price">
+                    <span class="price">US $413.00</span>
+                </div>
+            </a>
+            <a href="" class="item">
+                <img class="img-product" src="./img/item/abigail.jpg">
+                <span class="sale">New season</span>
+                <p class="name">ABIGAIL (Charcoal)</p>
+                <div class="w-price">
+                    <span class="price">US $127.00</span>
+                </div>
+            </a>
+            <a href="" class="item">
+                <img class="img-product" src="./img/item/amelia.jpg">
+                <span class="sale">New season</span>
+                <p class="name">AMELIA (Grey)</p>
+                <div class="w-price">
+                    <span class="price">US $127.00</span>
+                </div>
+            </a>
         </div>
     </div>
     <div class="sign-up">
         <div class="fill-voucher">
-            <h2 class="title-voucher">GET 10% OFF YOUR FIRST ORDER</h2>
-            <p class="desc-voucher">Sign up to our newsletter to be the first to know about our latest news and
-                exclusive offers and receive a 10% discount code to use on your first order with us.</p>
+            <h2 class="title-voucher">BE THE FIRST</h2>
+            <p class="desc-voucher">Get the latest news, invites and offers straight to your mail.</p>
             <form action="">
                 <label for="email">EMAIL ADDRESS</label>
                 <input id="email" type="email" name="">

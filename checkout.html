@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <title>Checkout | L&S</title>
+</head>
+
+<body>
+    <div id="header">
+        <a href="./index.html" class="go-shop">
+            <img class="icon-arrow-left" src="./img/icon/left-arrow.png">
+            CONTINUE SHOPPING</a>
+        <a href="./index.html" class="logo">
+            <img src="./img/favicon.png">
+            LYCO&SHINE
+        </a>
+    </div>
+    <div class="sales-mode">
+        <div class="shipping">
+            <img class="icon" src="./img/icon/icon-freeshipping.png">
+            FREE SHIPPING ON ORDERS $175+
+        </div>
+        <div class="return">
+            <img class="icon" src="./img/icon/icon-return.png">
+            EASY RETURNS IN 90 DAYS
+        </div>
+        <div class="warranty">
+            <img class="icon" src="./img/icon/icon-warranty.png">
+            2 YEARS WARRANTY
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="title">CHECKOUT</h2>
+        <div class="wrapper">
+            <div class="info">
+                <div class="the-basics">
+                    <h2 class="name">
+                        1. The Basics
+                        <img src="./img/icon/icon-arrow.svg">
+                    </h2>
+                    <div class="fields-wrapper input-info">
+                        <h3>Your Address</h3>
+                        <form class="input-address">
+                            <div class="input-field f-email">
+                                <label for="i-email">E-mail *</label>
+                                <input type="email" name="i-email" id="i-email" required>
+                            </div>
+                            <div class="input-field f-first-name">
+                                <label for="i-first-name">First name *</label>
+                                <input type="text" name="" id="i-first-name" required>
+                            </div>
+                            <div class="input-field f-last-name">
+                                <label for="i-last-name">Last name *</label>
+                                <input type="text" name="" id="i-last-name" required>
+                            </div>
+                            <div class="input-field f-phone">
+                                <label for="i-phone">Phone number *</label>
+                                <input type="text" name="" id="i-phone" required>
+                            </div>
+                            <div class="input-field f-address">
+                                <label for="i-address">Address *</label>
+                                <input type="text" name="" id="i-address" required>
+                            </div>
+                            <div class="input-field f-city">
+                                <label for="i-city">City *</label>
+                                <input type="text" name="" id="i-city" required>
+                            </div>
+                            <div class="input-field f-zip-code">
+                                <label for="i-zip-code">Zip code *</label>
+                                <input type="text" maxlength="10" name="" id="i-zip-code" required>
+                            </div>
+                            <div class="input-field f-province">
+                                <label for="">Province / Municipality * </label>
+                                <div class="province-wrapper">
+                                    <select required name="" id="select-province">
+                                        <option value="0">Ho Chi Minh</option>
+                                        <option value="1">Ha Noi</option>
+                                        <option value="2">Da Nang</option>
+                                        <option value="3">Hai Phong</option>
+                                        <option value="4">An Giang</option>
+                                    </select>
+                                    <img src="./img/icon/icon-arrow.svg" class="icon-arrow">
+                                </div>
+                            </div>
+                            <div class="input-field country">
+                                <h5>COUNTRY : </h5>
+                                <span>Vietnam</span>
+                            </div>
+                            <div class="btn-wrapper">
+                                <button type="submit" class="btn-confirm btn-style">Confirm</button>
+                                <button type="reset" class="btn-reset btn-style">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="shipping">
+                    <h2 class="name">
+                        2. Shipping
+                        <img src="./img/icon/icon-arrow.svg">
+                    </h2>
+                    <ul class="fields-wrapper">
+                        <li class="shipping-method">
+                            <div class="shipping-price">
+                                <label for="ups-express">
+                                    <input checked="checked" type="radio" name="check-express" id="ups-express">
+                                    <span class="checkbox"></span>
+                                    <img class="logo-express" src="./img/icon/Shipping_UPS.svg">
+                                    <p class="name-express">UPS Express Saver</p>
+                                    <p class="price-express">FREE</p>
+                                    <span class="shipping-data">UPS Express 2-3 working days</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="shipping-method">
+                            <div class="shipping-price">
+                                <label for="ems-express">
+                                    <input type="radio" name="check-express" id="ems-express">
+                                    <span class="checkbox"></span>
+                                    <img class="logo-express" src="./img/icon/EMS-Logo.png">
+                                    <p class="name-express">EMS Express</p>
+                                    <p class="price-express">FREE</p>
+                                    <span class="shipping-data">EMS Express 4-6 working days</span>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="payment">
+                    <h2 class="name">
+                        3. Payment
+                        <img src="./img/icon/icon-arrow.svg">
+                    </h2>
+                    <ul class="fields-wrapper">
+                        <li class="payment-method">
+                            <div class="wrapper-credit-card">
+                                <label for="credit-card" class="credit-card check-radio">
+                                    <input checked="checked" type="radio" name="check-payment" id="credit-card">
+                                    <span class="checkbox"></span>
+                                </label>
+                                <label for="credit-card" class="credit-card icon-credit-card">
+                                    <p class="name-method">Credit Card</p>
+                                    <div class="icon-payment">
+                                        <img class="logo-payment" src="./img/payment/visa.png">
+                                        <img class="logo-payment" src="./img/payment/master-card.png">
+                                        <img class="logo-payment" src="./img/payment/maestro.png">
+                                        <img class="logo-payment" src="./img/payment/amex.png">
+                                        <img class="logo-payment" src="./img/payment/discover.png">
+                                        <img class="logo-payment" src="./img/payment/diners club.png">
+                                        <img class="logo-payment" src="./img/payment/jcb.png">
+                                        <img class="logo-payment" src="./img/payment/apple pay.png">
+                                    </div>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="payment-method">
+                            <div class="wrapper-credit-card">
+                                <label class="credit-card check-radio" for="paypal">
+                                    <input type="radio" name="check-payment" id="paypal">
+                                    <span class="checkbox"></span>
+                                </label>
+                                <label class="credit-card icon-credit-card" for="paypal">
+                                    <p class="name-method">Paypal</p>
+                                    <div class="icon-payment">
+                                        <img class="logo-payment" src="./img/payment/paypal.png">
+                                    </div>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="payment-method">
+                            <div class="wrapper-credit-card">
+                                <label class="credit-card check-radio" for="monthly">
+                                    <input type="radio" name="check-payment" id="monthly">
+                                    <span class="checkbox"></span>
+                                </label>
+                                <label class="credit-card icon-credit-card" for="monthly">
+                                    <p class="name-method">Monthly Finacing</p>
+                                    <div class="icon-payment">
+                                        <img class="logo-payment" src="./img/payment/klarna.png">
+                                    </div>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="payment-method">
+                            <div class="wrapper-credit-card">
+                                <label class="credit-card check-radio" for="pay-30days">
+                                    <input type="radio" name="check-payment" id="pay-30days">
+                                    <span class="checkbox"></span>
+                                </label>
+                                <label class="credit-card icon-credit-card" for="pay-30days">
+                                    <p class="name-method">Pay in 30 days</p>
+                                    <div class="icon-payment">
+                                        <img class="logo-payment" src="./img/payment/klarna.png">
+                                    </div>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <a href="" class="btn-payment btn-style">
+                    <p>Complete Payment</p>
+                    <img src="./img/icon/white-arrow.png">
+                </a>
+                <div class="privacy-policy">
+                    <p>By placing your order you agree to our <a href="https://www.danielwellington.com/us/terms/">Terms & Conditions</a> and you understand that
+                        we will process your personal data on the basis of our <a href="https://www.danielwellington.com/us/privacy-policy/">Privacy Policy</a>.</p>
+                </div>
+            </div>
+            <div class="pay">
+                <div class="info-pay">
+                    <ul id="list-items-cart">
+                        <li class="item-cart">
+                            <div class="img-item">
+                                <img src="./img/item/GUELL.png">
+                            </div>
+                            <div class="desc-item">
+                                <b class="name-item fw600">GUELL</b>
+                                <p class="color-item">Color: Navy</p>
+                                <p class="size-item">Size: M</p>
+                                <p class="quantity-item">Qty: 1</p>
+                            </div>
+                            <p class="price-item">US $131.00</p>
+                        </li>
+                        <li class="item-cart">
+                            <div class="img-item">
+                                <img src="./img/item/REINDEER.png">
+                            </div>
+                            <div class="desc-item">
+                                <b class="name-item fw600">REINDEER</b>
+                                <p class="color-item">Color: Ivory</p>
+                                <p class="size-item">Size: S</p>
+                                <p class="quantity-item">Qty: 1</p>
+                            </div>
+                            <p class="price-item">US $95.20</p>
+                        </li>
+                    </ul>
+                    <div class="common-info shipping">
+                        <p style="text-transform: initial;">Delivery Fee</p>
+                        <span>FREE</span>
+                    </div>
+                    <div class="common-info grand-total">
+                        <p class="fw600">Grand total</p>
+                        <span class="fw600">US $226.20</span>
+                    </div>
+                </div>
+                <div class="coupon">
+                    <label for="code">Coupon Code</label>
+                    <input type="text" id="code" placeholder="Enter your code">
+                    <button class="btn-style">Apply</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
