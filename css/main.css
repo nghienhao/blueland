@@ -260,7 +260,7 @@
     text-align: center;
     text-decoration: none;
     border-radius: 2px;
-    transition: all 0.2 linear;
+    transition: all 0.2s linear;
 }
 
 .btn-view-cart:hover,
