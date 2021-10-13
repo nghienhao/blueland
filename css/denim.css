@@ -618,11 +618,12 @@
     padding: 0 16px;
     font-size: 14px;
     cursor: pointer;
+    transition: all 0.2s ease;
     border-bottom: 1px solid var(--border-color);
 }
 
 #bars ul li:hover {
-    background-color: var(--border-color);
+    background-color: #F4F5F7;
 }
 
 #bars ul li:last-child {
@@ -683,7 +684,7 @@
 
 .wrapper-btn {
     display: flex;
-    margin: 20px 0;
+    margin: 20px 8px;
 }
 
 .btn-style {
@@ -758,23 +759,24 @@
     display: none;
 }
 
-#sort:hover, .wrapper-btn .w-filter:hover, .btn-filter:hover,
+#sort:hover, .wrapper-btn .w-filter:hover,
 #bars .btn-bars button:nth-child(2):hover,
 .w-sort:hover {
     background-color: var(--btn-color);
     color: var(--white-color);
+    transition: all 0.2s ease;
 }
 
 .wrapper-item {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: center;
     margin-bottom: 40px;
 }
 
 .wrapper-item .item {
-    width: 24%;
+    max-width: 260px;
     display: flex;
     flex-direction: column;
     align-items: center;
