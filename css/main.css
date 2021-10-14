@@ -285,7 +285,7 @@
     align-items: center;
     position: absolute;
     margin-top: 200px;
-    right: 54%;
+    left: 200px;
     font-size: 24px;
     color: var(--white-color);
     letter-spacing: 4px;

@@ -10,7 +10,33 @@
     <link rel="stylesheet" href="css/main.css">
     <title>L&S | Official Website</title>
 </head>
+<!-- Messenger Chat plugin Code -->
+<div id="fb-root"></div>
 
+<!-- Your Chat plugin code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+
+<script>
+  var chatbox = document.getElementById('fb-customer-chat');
+  chatbox.setAttribute("page_id", "105850018433290");
+  chatbox.setAttribute("attribution", "biz_inbox");
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v12.0'
+    });
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
 <body>
     <div id="header">
         <div class="logo">
@@ -55,12 +81,12 @@
                     <li><a href="">Socks</a>
                 </ul>
             </li>
-            <li><a href="denim.html">COLLECTIONS</a>
+            <li><a href="collections.html">COLLECTIONS</a>
                 <ul class="sub-nav">
-                    <li><a href="">LS World Tour</a>
-                    <li><a href="">Fall 2021</a>
-                    <li><a href="">Spring/Summer 2022</a>
-                    <li><a href="">#RefineWithLS</a>
+                    <li><a href="collections.html">LS World Tour</a>
+                    <li><a href="collections.html">Fall 2021</a>
+                    <li><a href="collections.html">Spring/Summer 2022</a>
+                    <li><a href="collections.html">#RefineWithLS</a>
                 </ul>
             </li>
             <div class="icon-cart">
@@ -256,7 +282,7 @@
                 <ul class="column-list">
                     <li><a href="">All Eyewear</a></li>
                     <li><a href="">All Denim</a></li>
-                    <li><a href="">Stores</a></li>
+                    <li><a href="stores.html">Stores</a></li>
                     <li><a href="">Inspiration</a></li>
                     <li><a href="">Live Shopping</a></li>
                 </ul>
@@ -330,6 +356,7 @@
             <p class="copyright">© 2021 Lyco&Shine, INC.</p>
         </div>
     </div>
+    
 </body>
 
 </html>

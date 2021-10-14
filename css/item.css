@@ -598,7 +598,34 @@
 #i4:checked ~ #four,
 #i5:checked ~ #five {
     display: block;
-} 
+}
+
+.size-guide {
+    text-align: center;
+    text-transform: initial;
+    width: 100%;
+    margin: 16px 0;
+    font-size: 12px;
+    border-collapse: collapse;
+}
+
+.size-guide tr:nth-child(2), .size-guide tr:nth-child(3) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.size-guide tr:first-child {
+    font-weight: 500;
+    background-color: var(--border-color);
+    border-radius: 10px;
+    border-style: hidden;
+}
+
+.size-guide tr:first-child td:first-child { border-top-left-radius: 2px; }
+.size-guide tr:first-child td:last-child { border-top-right-radius: 2px; }
+
+.size-guide td {
+    padding: 4px 12px;
+}
 
 .wrapper-info .desc-item {
     width: 49%;
