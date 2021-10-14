@@ -10,6 +10,33 @@
     <link rel="stylesheet" href="css/checkout.css">
     <title>Checkout | L&S</title>
 </head>
+<!-- Messenger Chat plugin Code -->
+<div id="fb-root"></div>
+
+<!-- Your Chat plugin code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+
+<script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "105850018433290");
+    chatbox.setAttribute("attribution", "biz_inbox");
+
+    window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: 'v12.0'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 
 <body>
     <div id="header">
@@ -207,8 +234,10 @@
                     <img src="./img/icon/white-arrow.png">
                 </a>
                 <div class="privacy-policy">
-                    <p>By placing your order you agree to our <a href="https://www.danielwellington.com/us/terms/">Terms & Conditions</a> and you understand that
-                        we will process your personal data on the basis of our <a href="https://www.danielwellington.com/us/privacy-policy/">Privacy Policy</a>.</p>
+                    <p>By placing your order you agree to our <a href="https://www.danielwellington.com/us/terms/">Terms
+                            & Conditions</a> and you understand that
+                        we will process your personal data on the basis of our <a
+                            href="https://www.danielwellington.com/us/privacy-policy/">Privacy Policy</a>.</p>
                 </div>
             </div>
             <div class="pay">

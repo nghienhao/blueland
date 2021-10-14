@@ -10,6 +10,33 @@
     <link rel="stylesheet" href="css/item.css">
     <title>GUELL | L&S</title>
 </head>
+<!-- Messenger Chat plugin Code -->
+<div id="fb-root"></div>
+
+<!-- Your Chat plugin code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+
+<script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "105850018433290");
+    chatbox.setAttribute("attribution", "biz_inbox");
+
+    window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: 'v12.0'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 
 <body>
     <div id="header">
@@ -113,59 +140,59 @@
                 <input type="radio" name="images" id="i3">
                 <input type="radio" name="images" id="i4">
                 <input type="radio" name="images" id="i5">
-    
+
                 <div class="img-prod" id="one">
                     <img src="./img/item/GUELL-item1.jpg">
-    
+
                     <label class="prev" for="i5">
                         <img src="./img/icon/arrow-prev-next.png">
                     </label>
-    
+
                     <label class="next" for="i2">
                         <img src="./img/icon/arrow-prev-next.png">
                     </label>
                 </div>
-    
+
                 <div class="img-prod" id="two">
                     <img src="./img/item/GUELL-item2.jpg">
-    
+
                     <label class="prev" for="i1">
                         <img src="./img/icon/arrow-prev-next.png">
                     </label>
-    
+
                     <label class="next" for="i3">
                         <img src="./img/icon/arrow-prev-next.png">
                     </label>
                 </div>
                 <div class="img-prod" id="three">
                     <img src="./img/item/GUELL-item3.jpg">
-    
+
                     <label class="prev" for="i2">
                         <img src="./img/icon/arrow-prev-next.png">
                     </label>
-    
+
                     <label class="next" for="i4">
                         <img src="./img/icon/arrow-prev-next.png">
                     </label>
                 </div>
                 <div class="img-prod" id="four">
                     <img src="./img/item/GUELL-item4.jpg">
-    
+
                     <label class="prev" for="i3">
                         <img src="./img/icon/arrow-prev-next.png">
                     </label>
-    
+
                     <label class="next" for="i5">
                         <img src="./img/icon/arrow-prev-next.png">
                     </label>
                 </div>
                 <div class="img-prod" id="five">
                     <img src="./img/item/GUELL-item5.jpg">
-    
+
                     <label class="prev" for="i4">
                         <img src="./img/icon/arrow-prev-next.png">
                     </label>
-    
+
                     <label class="next" for="i1">
                         <img src="./img/icon/arrow-prev-next.png">
                     </label>
@@ -185,7 +212,7 @@
                     <input type="radio" name="size" id="size-s" checked>
                     <input type="radio" name="size" id="size-m">
                     <input type="radio" name="size" id="size-l">
-    
+
                     <label for="size-s" id="choose-s">S</label>
                     <label for="size-m" id="choose-m">M</label>
                     <label for="size-l" id="choose-l">L</label>
@@ -261,7 +288,9 @@
                 <div class="payment">
                     <h5 class="title-row">Payment options</h5>
                     <div class="wrapper-payment">
-                        <p class="desc-payment">Lyco&Shine offers secure payment methods and you can choose to pay with Visa, Mastercard, Maestro, American Express, Discover, Diners Club International, Paypal, JCB, or Apple Pay.</p>
+                        <p class="desc-payment">Lyco&Shine offers secure payment methods and you can choose to pay with
+                            Visa, Mastercard, Maestro, American Express, Discover, Diners Club International, Paypal,
+                            JCB, or Apple Pay.</p>
                         <div class="icon">
                             <div>
                                 <img src="./img/payment/visa.png">

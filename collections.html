@@ -11,6 +11,33 @@
     <link rel="stylesheet" href="css/collections.css">
     <title>Spring/Summer 2022 Collections | L&S</title>
 </head>
+<!-- Messenger Chat plugin Code -->
+<div id="fb-root"></div>
+
+<!-- Your Chat plugin code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+
+<script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "105850018433290");
+    chatbox.setAttribute("attribution", "biz_inbox");
+
+    window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: 'v12.0'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 
 <body>
     <div id="header">
@@ -130,14 +157,16 @@
     <div class="container">
         <h2 class="title" class="fw600">Makes Stylish Entrance in Spring-Summer-2022 Collection with Wang Yi Bo</h2>
         <video class="main-video" src="./img/collections/Campaign.mp4" autoplay controls></video>
-        <p class="desc-yibo">The SS22 Men’s Collection of Japanese high fashion brand L&S have now hit stores, presenting another novel
+        <p class="desc-yibo">The SS22 Men’s Collection of Japanese high fashion brand L&S have now hit stores,
+            presenting another novel
             takes on the luxurious Spring/Summer wardrobe. This season comes with a dynamic ensemble of styles, where
             creative ingenuity shines through each and every detail to push the styling envelope with a mythical spin.
             Wintry materials and hues come together for cocooning cosiness, unveiling an unexpectedly mellow facet of
             the street dandy. This Spring, wrap yourself up in L&S and hit the streets with global ambassador Wang Yi
             Bo!</p>
         <img src="./img/collections/img.jpg">
-        <p class="desc-yibo">In line with L&S’s spirit of quality excellence, corduroy denim and washed jacquard denim make luxurious
+        <p class="desc-yibo">In line with L&S’s spirit of quality excellence, corduroy denim and washed jacquard denim
+            make luxurious
             entrance for an ever more collectible collection. Denim fabrics in different textures are patched together,
             dotted with rivets, metal buckle and multi-pockets for a perfect union of workwear references and denim
             items. Retro checkered blazer and corduroy jacket are the seasonal must-haves for a vintage ride in a cosy
