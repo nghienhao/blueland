@@ -369,6 +369,7 @@
 .sign-up .connect-social .social {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     margin: 0 6px;
     width: 36px;
     height: 36px;
