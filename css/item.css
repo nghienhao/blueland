@@ -872,8 +872,3 @@
     padding: 40px 0;
     letter-spacing: 2px;
 }
-
-.fb-like {
-    filter: hue-rotate(315deg);
-    -webkit-filter: hue-rotate(315deg);
-}
