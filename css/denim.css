@@ -327,6 +327,7 @@
 }
 
 .sign-up #btn-sign-up {
+    font-family: 'Montserrat', sans-serif;
     border: none;
     position: absolute;
     right: 30px;
@@ -575,6 +576,7 @@
 #bars {
     text-transform: uppercase;
     position: fixed;
+    overflow-y: hidden;
     top: 0;
     right: 0;
     bottom: 0;

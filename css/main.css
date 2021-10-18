@@ -548,6 +548,7 @@
 }
 
 .sign-up #btn-sign-up {
+    font-family: 'Montserrat', sans-serif;
     border: none;
     position: absolute;
     right: 30px;
