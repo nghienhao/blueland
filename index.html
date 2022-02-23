@@ -1,361 +1,1904 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="box-border">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/main.css">
-    <title>L&S | Official Website</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <!-- <script src="./js/app.js"></script> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <title>Home | Blueland</title>
 </head>
 
-<body>
-    <div id="header">
-        <div class="logo">
-            <a href="#" class="logo">
-                <img src="./img/logo.png">
-                LYCO&SHINE
+<body onresize="topBtnControls()">
+    <div class="wrapper">
+        <header class="fixed z-10 hidden w-full h-16 pl-6 pr-10 bg-white shadow desktop-header lg:flex">
+            <ul class="relative flex items-center h-full">
+                <li class="flex px-4 py-2 text-current transition rounded-md cursor-pointer hover:bg-blue-light" id="btn-shop">
+                    <button class="text-lg" type="button">Shop</button>
+                    <div class="icon w-2.5 flex items-center ml-1 transition-transform" id="btn-shop-rotate">
+                        <svg viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.49997 6L8.42508 2.07489C8.74258 1.75739 8.74258 1.24261 8.42508 0.925107C8.10757 0.607602 7.5928 0.607602 7.27529 0.925107L4.49997 3.70043L1.72465 0.925107C1.40715 0.607603 0.892371 0.607602 0.574866 0.925107C0.257361 1.24261 0.257361 1.75739 0.574866 2.07489L4.49997 6Z"
+                                fill="#003057" class="fill-current"></path>
+                        </svg>
+                    </div>
+                    <div
+                        class="sub-menu fade1 hidden rounded-b-md shadow-md bg-white grid-cols-2 absolute top-[100%] left-2.25 w-max p-4 xl:p-6 border-t border-[#deeaff]">
+                        <ul class="grid grid-cols-1 pr-15 border-r border-[#deeaff]">
+                            <li
+                                class="p-2.25 flex max-w-[325px] group hover:bg-blue-light transition-all cursor-pointer">
+                                <img class="w-20 h-20" src="./images/dropdownmenu.png" alt="">
+                                <div class="flex items-center pl-4 group-hover:text-royal-blue">
+                                    <p class="text-lg">Shop All</p>
+                                    <div
+                                        class="icon w-2 flex items-center ml-1 rotate-[270deg] group-hover:translate-x-1 transition-transform">
+                                        <svg viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M4.49997 6L8.42508 2.07489C8.74258 1.75739 8.74258 1.24261 8.42508 0.925107C8.10757 0.607602 7.5928 0.607602 7.27529 0.925107L4.49997 3.70043L1.72465 0.925107C1.40715 0.607603 0.892371 0.607602 0.574866 0.925107C0.257361 1.24261 0.257361 1.75739 0.574866 2.07489L4.49997 6Z"
+                                                fill="#003057" class="fill-current"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </li>
+                            <li
+                                class="p-2.25 flex max-w-[325px] items-center group hover:bg-blue-light transition-all cursor-pointer">
+                                <img class="w-20 h-20" src="./images/dropdownmenu2.png" alt="">
+                                <div class="flex flex-wrap items-center pl-4 group-hover:text-royal-blue">
+                                    <p class="text-lg">Starter Kits</p>
+                                    <div
+                                        class="leading-none text-[13px] bg-[#FCE5FF] px-2 pt-1 pb-0.5 rounded-[50px] ml-2">
+                                        Save 25%
+                                    </div>
+                                    <p class="text-[13px] text-navy-blue font-Sailec w-full">Get your first set of
+                                        reusable cleaners</p>
+                                </div>
+                            </li>
+                            <li
+                                class="p-2.25 flex max-w-[325px]  items-center group hover:bg-blue-light transition-all cursor-pointer">
+                                <img class="w-20 h-20" src="./images/dropdownmenu3.png" alt="">
+                                <div class="flex flex-wrap pl-4 group-hover:text-royal-blue">
+                                    <p class="text-lg">Refills</p>
+                                    <p class="text-[13px] text-navy-blue font-Sailec w-full">Once you're out, refill and
+                                        reuse</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="grid items-center grid-cols-2">
+                            <li>
+                                <a href="" class="flex flex-col justify-center items-center hover:bg-blue-light hover:text-royal-blue py-2.25 px-4">
+                                    <img class="w-20 h-20" src="./images/handsoap.png" alt="">
+                                    <p class="pt-2 text-center">Hand Soap</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="flex flex-col justify-center items-center hover:bg-blue-light hover:text-royal-blue py-2.25 px-4">
+                                    <img class="w-20 h-20" src="./images/dish.png" alt="">
+                                    <p class="pt-2 text-center">Dish</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="flex flex-col justify-center items-center hover:bg-blue-light hover:text-royal-blue py-2.25 px-4">
+                                    <img class="w-20 h-20" src="./images/laundry.png" alt="">
+                                    <p class="pt-2 text-center">Laundry</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="flex flex-col justify-center items-center hover:bg-blue-light hover:text-royal-blue py-2.25 px-4">
+                                    <img class="w-20 h-20" src="./images/home cleaners.png" alt="">
+                                    <p class="pt-2 text-center">Home Cleaners</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="./how-its-work.html"
+                        class="px-4 py-2 text-lg text-current transition ease-linear rounded-md hover:bg-blue-light">How
+                        It Works</a></li>
+                <li><a href="./our-misson.html"
+                        class="px-4 py-2 text-lg text-current transition ease-linear rounded-md hover:bg-blue-light">Our
+                        Misson</a></li>
+            </ul>
+            <a href="" class="flex items-center w-40 logo absolute-center">
+                <svg viewBox="0 0 142 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M121.72 26.7708L121.7 26.7408L121.71 0.0607834L116.9 0.0507812V14.0708L111.6 0.0507812H106.41V26.7708H111.23V12.7708L116.52 26.7708H121.72Z"
+                        class="transition ease-linear fill-current"></path>
+                    <path
+                        d="M139.56 1.55054C138.57 0.560545 137.44 0.0605469 136.16 0.0605469H126L125.99 26.7805H136.16C137.43 26.7805 138.56 26.2905 139.55 25.3005C140.54 24.3105 141.03 23.1605 141.03 21.8305V5.01055C141.05 3.69055 140.55 2.54054 139.56 1.55054ZM136.2 21.8505H130.85V5.00055H136.2V21.8505Z"
+                        class="transition ease-linear fill-current"></path>
+                    <path
+                        d="M14.73 9.38V4.94C14.73 3.63 14.24 2.48 13.26 1.49C12.28 0.500002 11.14 0 9.86 0H0.0100002L0 26.84H9.85C11.13 26.84 12.27 26.35 13.25 25.37C14.23 24.39 14.72 23.23 14.72 21.9V17.42C14.72 16.5 14.54 15.76 14.18 15.22C13.82 14.67 13.37 14.06 12.85 13.39C13.38 12.74 13.82 12.15 14.18 11.61C14.55 11.07 14.73 10.33 14.73 9.38ZM9.53 21.89H4.54V15.91H9.53V21.89ZM9.54 10.94H4.55V4.96H9.54V10.94Z"
+                        class="transition ease-linear fill-current"></path>
+                    <path d="M31.1203 21.89H23.9503V0H19.0703V26.84L31.1203 26.85V21.89Z"
+                        class="transition ease-linear fill-current"></path>
+                    <path d="M82.3391 21.89H75.1691L75.1791 0H70.2991L70.2891 26.84L82.3391 26.85V21.89Z"
+                        class="transition ease-linear fill-current"></path>
+                    <path
+                        d="M65.69 21.8998H57.86V15.9198H64.52V10.9498H57.87V4.96976H65.59V0.00976562H53.01L53 26.8498H65.69V21.8998Z"
+                        class="transition ease-linear fill-current"></path>
+                    <path
+                        d="M34.1602 21.8095V0.0195312H38.8402V19.3595C38.8402 20.1295 38.5902 22.1495 40.3902 22.1495H42.3402C44.0902 22.1495 44.0402 20.5095 44.0402 19.4595V0.0195312H48.6702V21.8095C48.6702 24.1095 47.6102 25.3795 46.1602 26.1495C44.9302 26.7895 43.7402 26.7895 43.6902 26.7895H39.1802C36.5002 26.7895 34.1602 24.9095 34.1602 21.8095Z"
+                        class="transition ease-linear fill-current"></path>
+                    <path
+                        d="M91.4105 21.2013H96.5305L97.6605 26.8013H102.57L97.0605 0.03125H90.8705L85.4805 26.8613H90.3205L91.4105 21.2013ZM93.9705 7.50125L95.6005 16.3413H92.3305L93.9705 7.50125Z"
+                        class="transition ease-linear fill-current"></path>
+                </svg>
             </a>
-        </div>
-        <ul id="nav">
-            <li><a href="denim.html">EYEWEAR</a>
-                <ul class="sub-nav">
-                    <li><a href="">All Eyewear</a>
-                    <li><a href="">Women's Eyewear</a>
-                    <li><a href="">Men's Eyewear</a>
-                    <li><a href="">Best Sellers</a>
+
+            <ul class="flex items-center h-full ml-auto">
+                <li><a href=""
+                        class="px-4 py-2 text-lg text-current transition ease-linear rounded-md hover:bg-blue-light">FAQ</a>
+                </li>
+                <li><a href="./login.html" class="px-4 py-2 text-lg text-current transition rounded-md hover:bg-blue-light">My
+                        Account</a></li>
+                <li>
+                    <a href="./the-clean-suite.html"
+                        class="btn text-white bg-blue border rounded-[50px] border-blue text-lg px-4 py-0.5 transition ease-linear duration-200">Get
+                        My Kit</a>
+                </li>
+            </ul>
+        </header>
+        <header class="fixed z-10 flex items-center w-full bg-white shadow mobile-header lg:hidden h-14">
+            <button class="p-2 pl-3 menu-mobile">
+                <div class="flex flex-col justify-between h-5 w-7">
+                    <div class="icon-change h-0.75 w-7 rounded-md bg-current transition"></div>
+                    <div class="icon-change h-0.75 w-7 rounded-md bg-current transition"></div>
+                    <div class="icon-change h-0.75 w-7 rounded-md bg-current transition"></div>
+                </div>
+            </button>
+            <a href="" class="flex items-center w-40 logo absolute-center">
+                <svg viewBox="0 0 142 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M121.72 26.7708L121.7 26.7408L121.71 0.0607834L116.9 0.0507812V14.0708L111.6 0.0507812H106.41V26.7708H111.23V12.7708L116.52 26.7708H121.72Z"
+                        class="transition ease-linear fill-current"></path>
+                    <path
+                        d="M139.56 1.55054C138.57 0.560545 137.44 0.0605469 136.16 0.0605469H126L125.99 26.7805H136.16C137.43 26.7805 138.56 26.2905 139.55 25.3005C140.54 24.3105 141.03 23.1605 141.03 21.8305V5.01055C141.05 3.69055 140.55 2.54054 139.56 1.55054ZM136.2 21.8505H130.85V5.00055H136.2V21.8505Z"
+                        class="transition ease-linear fill-current"></path>
+                    <path
+                        d="M14.73 9.38V4.94C14.73 3.63 14.24 2.48 13.26 1.49C12.28 0.500002 11.14 0 9.86 0H0.0100002L0 26.84H9.85C11.13 26.84 12.27 26.35 13.25 25.37C14.23 24.39 14.72 23.23 14.72 21.9V17.42C14.72 16.5 14.54 15.76 14.18 15.22C13.82 14.67 13.37 14.06 12.85 13.39C13.38 12.74 13.82 12.15 14.18 11.61C14.55 11.07 14.73 10.33 14.73 9.38ZM9.53 21.89H4.54V15.91H9.53V21.89ZM9.54 10.94H4.55V4.96H9.54V10.94Z"
+                        class="transition ease-linear fill-current"></path>
+                    <path d="M31.1203 21.89H23.9503V0H19.0703V26.84L31.1203 26.85V21.89Z"
+                        class="transition ease-linear fill-current"></path>
+                    <path d="M82.3391 21.89H75.1691L75.1791 0H70.2991L70.2891 26.84L82.3391 26.85V21.89Z"
+                        class="transition ease-linear fill-current"></path>
+                    <path
+                        d="M65.69 21.8998H57.86V15.9198H64.52V10.9498H57.87V4.96976H65.59V0.00976562H53.01L53 26.8498H65.69V21.8998Z"
+                        class="transition ease-linear fill-current"></path>
+                    <path
+                        d="M34.1602 21.8095V0.0195312H38.8402V19.3595C38.8402 20.1295 38.5902 22.1495 40.3902 22.1495H42.3402C44.0902 22.1495 44.0402 20.5095 44.0402 19.4595V0.0195312H48.6702V21.8095C48.6702 24.1095 47.6102 25.3795 46.1602 26.1495C44.9302 26.7895 43.7402 26.7895 43.6902 26.7895H39.1802C36.5002 26.7895 34.1602 24.9095 34.1602 21.8095Z"
+                        class="transition ease-linear fill-current"></path>
+                    <path
+                        d="M91.4105 21.2013H96.5305L97.6605 26.8013H102.57L97.0605 0.03125H90.8705L85.4805 26.8613H90.3205L91.4105 21.2013ZM93.9705 7.50125L95.6005 16.3413H92.3305L93.9705 7.50125Z"
+                        class="transition ease-linear fill-current"></path>
+                </svg>
+            </a>
+            <button class="p-2 pr-3 ml-auto">
+                <div class="w-7">
+                    <svg class="w-full" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.91336 4.28057e-07C0.408912 4.28057e-07 0 0.408927 0 0.913361C0 1.41779 0.408912 1.82672 0.91336 1.82672H4.4336L7.57328 16.6402C7.6975 17.1979 8.06296 17.662 8.5247 17.6583H23.7474C24.2299 17.665 24.6737 17.2275 24.6737 16.7449C24.6737 16.2623 24.2299 15.8247 23.7474 15.8316H9.2668L8.87671 14.0048H24.9652C25.3741 14.0018 25.7605 13.6903 25.85 13.2913L27.9812 4.15769C28.0999 3.62762 27.6396 3.04843 27.0964 3.04453H6.56478L6.07004 0.723077C5.98361 0.317515 5.59037 -0.000425807 5.17571 4.28057e-07H0.91336ZM6.94534 4.87126H11.7024L12.1591 7.61134H7.52572L6.94534 4.87126ZM13.5672 4.87126H19.3138L18.8571 7.61134H14.0239L13.5672 4.87126ZM21.1785 4.87126H25.9452L25.3077 7.61134H20.7219L21.1785 4.87126ZM7.91579 9.43806H12.4636L12.9202 12.1781H8.49614L7.91579 9.43806ZM14.3283 9.43806H18.5526L18.096 12.1781H14.785L14.3283 9.43806ZM20.4174 9.43806H24.8796L24.2421 12.1781H19.9607L20.4174 9.43806ZM11.8737 18.8761C10.2031 18.8761 8.82915 20.2499 8.82915 21.9206C8.82915 23.5912 10.2031 24.9651 11.8737 24.9651C13.5443 24.9651 14.9182 23.5912 14.9182 21.9206C14.9182 20.25 13.5443 18.8761 11.8737 18.8761ZM20.3984 18.8761C18.7278 18.8761 17.3538 20.2499 17.3538 21.9206C17.3538 23.5912 18.7278 24.9651 20.3984 24.9651C22.069 24.9651 23.4429 23.5912 23.4429 21.9206C23.4429 20.25 22.069 18.8761 20.3984 18.8761ZM11.8737 20.7028C12.5571 20.7028 13.0915 21.2372 13.0915 21.9206C13.0915 22.604 12.5571 23.1384 11.8737 23.1384C11.1903 23.1384 10.6559 22.604 10.6559 21.9206C10.6559 21.2372 11.1903 20.7028 11.8737 20.7028ZM20.3984 20.7028C21.0818 20.7028 21.6162 21.2372 21.6162 21.9206C21.6162 22.604 21.0818 23.1384 20.3984 23.1384C19.715 23.1384 19.1806 22.604 19.1806 21.9206C19.1806 21.2372 19.715 20.7028 20.3984 20.7028Z"
+                            class="fill-current"></path>
+                    </svg>
+                </div>
+            </button>
+            <div class="sub-menu-mobile hidden fixed inset-0 top-[3.5rem] text-current font-Sailec w-full bg-white">
+                <ul class="pt-6 pb-2 gap-y-6 px-7.5 bg-blue-light">
+                    <li class="border-b border-[#deeaff]"><a href="" class="block mb-5 text-lg sm:text-xl">Shop All</a></li>
+                    <li class="flex items-center mt-5"><a href="" class="block text-lg sm:text-xl">Starter Kits</a>
+                        <span
+                        class="ml-2.25 leading-none text-[11px] xl:text-[1rem] bg-[#FCE5FF] px-2 pt-1 pb-0.5 rounded-[50px] font-SailecM">
+                        Save up to 25%
+                    </span></li>
+                    <li class="border-b border-[#deeaff]"><a href="" class="block my-5 text-lg sm:text-xl">Refills</a></li>
+                    <li><a href="" class="block my-5 text-lg sm:text-xl">Hand Soap</a></li>
+                    <li><a href="" class="block my-5 text-lg sm:text-xl">Home Cleaners</a></li>
+                    <li><a href="" class="block my-5 text-lg sm:text-xl">Laundry</a></li>
+                    <li><a href="" class="block my-5 text-lg sm:text-xl">Dish</a></li>
                 </ul>
-            </li>
-            <li><a href="denim.html">DENIM</a>
-                <ul class="sub-nav">
-                    <li><a href="">All Denim</a>
-                    <li><a href="">Women's Denim</a>
-                    <li><a href="">Men's Denim</a>
-                    <li><a href="">#LSxChanel</a>
+                <ul class="py-8 gap-y-6 px-7.5">
+                    <li><a href="" class="block mb-5 text-lg sm:text-xl">How It Works</a></li>
+                    <li><a href="./our-misson.html" class="block my-5 text-lg sm:text-xl">Our Misson</a></li>
+                    <li><a href="" class="block mt-5 text-lg sm:text-xl">FAQ</a></li>
                 </ul>
-            </li>
-            <li><a href="denim.html">COSMETICS</a>
-                <ul class="sub-nav">
-                    <li><a href="">All Cosmetics</a>
-                    <li><a href="">Foundation</a>
-                    <li><a href="">Highlighter</a>
-                    <li><a href="">Lipsticks</a>
-                    <li><a href="">Primer</a>
-                    <li><a href="">Mascara</a>
-                </ul>
-            </li>
-            <li><a href="denim.html">ACCESSORIES</a>
-                <ul class="sub-nav">
-                    <li><a href="">All Accessories</a>
-                    <li><a href="">Hats & Gloves</a>
-                    <li><a href="">Bags</a>
-                    <li><a href="">Belts</a>
-                    <li><a href="">Socks</a>
-                </ul>
-            </li>
-            <li><a href="collections.html">COLLECTIONS</a>
-                <ul class="sub-nav">
-                    <li><a href="collections.html">LS World Tour</a>
-                    <li><a href="collections.html">Fall 2021</a>
-                    <li><a href="collections.html">Spring/Summer 2022</a>
-                    <li><a href="collections.html">#RefineWithLS</a>
-                </ul>
-            </li>
-            <div class="icon-cart">
-                <a href="cart.html">
-                    <img src="./img/icon/icon-cart.png">
-                    <span class="quantity">2</span>
-                </a>
-                <div class="show-cart">
-                    <ul id="list-items-cart">
-                        <li class="item-cart">
-                            <div class="img-item">
-                                <a href="item.html"><img src="./img/item/GUELL.png"></a>
+                <nav class="absolute inset-x-0 bottom-0 flex items-center text-lg bg-blue-light font-SailecM justify-evenly">
+                    <a href="" class="py-2">My Account</a>
+                    <a href="" class="py-2">Contact Us</a>
+                </nav>
+            </div>
+        </header>
+        <main class="w-full h-auto lg:pt-16 pt-14">
+            <div class="poster grid grid-cols-1 lg:grid-cols-2 lg:min-h-[43.25rem] w-full">
+                <div class="bg-[#DEEAFF] xl:px-20 lg:pt-30 px-4 py-9 xs:px-[1.875rem] sm:py-14 h-auto ">
+                    <h2 class="font-SailecM xl:text-[3.5rem] sm:text-[2.5rem] text-[2rem] text-current leading-[1.3em]">
+                        The Future<span class="font-HermannSBI text-[1.28em]"> of Clean</span> Has Arrived</h2>
+                    <p class="mt-4 text-base text-current font-Sailec sm:text-xl lg:mt-5">Start off the new year right
+                        with our
+                        revolutionary, refillable cleaners and hand soap</p>
+                    <button
+                        class="btn font-SailecM text-base rounded-[50px] lg:text-lg mt-5 lg:mt-10 text-white bg-blue border border-blue px-[1.875rem] py-1.5 transition ease-linear duration-200">Shop
+                        Now</button>
+                </div>
+                <div class="">
+                    <img class="object-cover w-full h-full" src="./images/poster.jpg" alt="">
+                </div>
+            </div>
+            <div class="relative px-4 py-10 how-it-works md:py-20 lg:py-24">
+                <img class="absolute hidden lg:top-14 lg:left-2 xl:top-14 xl:left-36 lg:block" src="./images/cook1.png"
+                    alt="">
+                <img class="absolute hidden lg:top-14 lg:right-2 xl:top-24 xl:right-28 lg:block"
+                    src="./images/cook2.png" alt="">
+                <h1
+                    class="font-SailecM text-center text-current text-[1.75rem] md:text-[2rem] lg:text-[2.5rem] mb-4 lg:mb-7">
+                    How It Works</h1>
+                <p
+                    class="font-Sailec flex mx-auto text-center text-current text-base md:text-xl lg:text-[1.625rem] max-w-md md:max-w-xl lg:max-w-2xl leading-142">
+                    Buy the bottle once.
+                    Refill forever. All without the plastic waste.</p>
+            </div>
+            <div class="mb-20 scroll-soap">
+                <div class="desktop-scroll relative w-full pt-[50%] hidden md:block text-current">
+                    <div class="absolute inset-0 flex items-center px-10 auto-slide-js lg:px-15 xl:px-20 fade">
+                        <div class="w-1/2">
+                            <video class="w-full rounded-md" preload="metadata" src="./images/soapvidewo.mp4" loop
+                                autoplay muted></video>
+                        </div>
+                        <div class="w-1/2 pl-10 lg:pl-15 max-w-[475px] mx-auto">
+                            <h2 class="text-2xl font-SailecM md:text-3xl lg:text-[2rem] leading-130 mb-2.25">
+                                Cleaning & Soap Tablets</h2>
+                            <p class="text-base font-Sailec sm:text-lg xl:text-xl md:w-full xl:w-11/12">Fill your
+                                Forever
+                                Bottle with water, drop in a tablet, and get cleaning.</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 flex items-center px-10 auto-slide-js lg:px-15 xl:px-20 fade">
+                        <div class="w-1/2">
+                            <img class="w-full rounded-md" src="./images/soap.jpg"></img>
+                        </div>
+                        <div class="w-1/2 pl-10 lg:pl-15 max-w-[475px] mx-auto">
+                            <h2 class="text-2xl font-SailecM md:text-3xl lg:text-[2rem] leading-130 mb-2.25">
+                                Powder Dish Soap</h2>
+                            <p class="text-base font-Sailec sm:text-lg xl:text-xl md:w-full xl:w-11/12">Shake onto a wet
+                                sponge or directly onto dirty dishes and start washing.</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 flex items-center px-10 auto-slide-js lg:px-15 xl:px-20 fade">
+                        <div class="w-1/2">
+                            <img class="w-full rounded-md" src="./images/soap1.jpg"></img>
+                        </div>
+                        <div class="w-1/2 pl-10 lg:pl-15 max-w-[475px] mx-auto">
+                            <h2 class="text-2xl font-SailecM md:text-3xl lg:text-[2rem] leading-130 mb-2.25">
+                                Laundry + Dishwasher Tablets</h2>
+                            <p class="text-base font-Sailec sm:text-lg xl:text-xl md:w-full xl:w-11/12">Drop into your
+                                washer for an earth-friendly clean—without sending dissolved plastic down the drain!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mobile-scroll md:hidden">
+                    <div class="overflow-hidden text-current">
+                        <div class="mobile-slide-soap flex translate-x-[12.5%] transition-transform duration-300">
+                            <div class="xs:min-w-[75%] min-w-[89%] px-2">
+                                <video src="./images/soapvidewo.mp4" loop autoplay muted
+                                    class="rounded-md video-scroll"></video>
+                                <div class="mt-5">
+                                    <h2
+                                        class="text-2xl font-SailecM m:text-3xl l:text-[2rem] leading-130 mb-[0.625rem] mt-7">
+                                        Cleaning & Soap Tablets</h2>
+                                    <p class="w-full text-base font-Sailec s:text-lg xl:text-xl">Fill your Forever
+                                        Bottle with water, drop in a tablet, and get cleaning.</p>
+                                </div>
                             </div>
-                            <div class="desc-item">
-                                <b class="name-item fw600">GUELL (Navy, Men)</b>
-                                <p class="quantity-item">Qty: 1</p>
+                            <div class="xs:min-w-[75%] min-w-[89%] px-2">
+                                <img class="block rounded-md" src="./images/soap.jpg" alt="">
+                                <div class="mt-5">
+                                    <h2
+                                        class="text-2xl font-SailecM m:text-3xl l:text-[2rem] leading-130 mb-[0.625rem] mt-7">
+                                        Powder Dish Soap</h2>
+                                    <p class="w-full text-base font-Sailec s:text-lg xl:text-xl">Shake onto a wet sponge
+                                        or directly onto dirty dishes and start washing.</p>
+                                </div>
                             </div>
-                            <div class="icon-remove-cart">
-                                <img src="./img/icon/icon-remove-cart.svg">
-                                <b class="fw600 price-item">US $131.00</b>
+                            <div class="xs:min-w-[75%] min-w-[89%] px-2">
+                                <img class="rounded-md" src="./images/soap1.jpg" alt="">
+                                <div class="mt-5">
+                                    <h2
+                                        class="text-2xl font-SailecM m:text-3xl l:text-[2rem] leading-130 mb-[0.625rem] mt-7">
+                                        Laundry + Dishwasher Tablets</h2>
+                                    <p class="w-full text-base font-Sailec s:text-lg xl:text-xl">Drop into your washer
+                                        for an earth-friendly clean—without sending dissolved plastic down the drain!
+                                    </p>
+                                </div>
                             </div>
-                        </li>
-                        <li class="item-cart">
-                            <div class="img-item">
-                                <a href="item.html"><img src="./img/item/REINDEER.png"></a>
-                            </div>
-                            <div class="desc-item">
-                                <b class="name-item fw600">REINDEER (Ivory)</b>
-                                <p class="quantity-item">Qty: 1</p>
-                            </div>
-                            <div class="icon-remove-cart">
-                                <img src="./img/icon/icon-remove-cart.svg">
-                                <b class="fw600 price-item">US $95.20</b>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="btn">
-                        <a href="cart.html" class="btn-view-cart">View Cart (2)</a>
-                        <a href="checkout.html" class="btn-check-out">Checkout</a>
+                        </div>
+                    </div>
+                    <button
+                        class="btn-control disabled: opacity-50 absolute flex justify-center left-0 xs:left-1 sm:left-2.25 p-2">
+                        <div
+                            class="w-7.5 h-7.5 border border-current rounded-[50%] flex items-center justify-center shadow bg-white">
+                            <svg class="w-2" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M-4.96461e-08 4.49991L3.92511 0.574799C4.24261 0.257294 4.75739 0.257294 5.07489 0.574799C5.3924 0.892304 5.3924 1.40708 5.07489 1.72459L2.29957 4.49991L5.07489 7.27523C5.3924 7.59273 5.3924 8.10751 5.07489 8.42501C4.75739 8.74252 4.24261 8.74252 3.92511 8.42501L-4.96461e-08 4.49991Z"
+                                    fill="#003057" class="fill-current"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <button
+                        class="btn-control absolute flex justify-center right-0 xs:right-1 sm:right-2.25 p-2 rotate-180">
+                        <div
+                            class="w-7.5 h-7.5 border border-current rounded-[50%] flex items-center justify-center shadow  bg-white">
+                            <svg class="w-2" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M-4.96461e-08 4.49991L3.92511 0.574799C4.24261 0.257294 4.75739 0.257294 5.07489 0.574799C5.3924 0.892304 5.3924 1.40708 5.07489 1.72459L2.29957 4.49991L5.07489 7.27523C5.3924 7.59273 5.3924 8.10751 5.07489 8.42501C4.75739 8.74252 4.24261 8.74252 3.92511 8.42501L-4.96461e-08 4.49991Z"
+                                    fill="#003057" class="fill-current"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="mt-7.5 pb-10 flex justify-center space-x-3">
+                        <button onclick="btnCircle1()"
+                            class="btn-current w-2.25 h-2.25 rounded-[50%] border border-current"></button>
+                        <button onclick="btnCircle1()"
+                            class="btn-current w-2.25 h-2.25 rounded-[50%] border border-current"></button>
+                        <button onclick="btnCircle1()"
+                            class="btn-current w-2.25 h-2.25 rounded-[50%] border border-current"></button>
                     </div>
                 </div>
             </div>
-        </ul>
-    </div>
-    <div class="slider">
-        <div class="slogan">
-            <b class="fw600">REFINE YOURSELF, WEAR US</b>
-            <button class="btn-explore">EXPLORE</button>
-        </div>
-    </div>
-    <div class="container">
-        <div class="sales-mode">
-            <div class="shipping">
-                <img class="icon" src="./img/icon/icon-freeshipping.png">
-                FREE SHIPPING ON ORDERS $175+
-            </div>
-            <div class="return">
-                <img class="icon" src="./img/icon/icon-return.png">
-                EASY RETURNS IN 90 DAYS
-            </div>
-            <div class="warranty">
-                <img class="icon" src="./img/icon/icon-warranty.png">
-                2 YEARS WARRANTY
-            </div>
-        </div>
-        <ul class="categories">
-            <li class="category">EYEWEAR</li>
-            <li class="category">T-SHIRT</li>
-            <li class="category">PANT</li>
-            <li class="category">OUTERWEAR</li>
-        </ul>
-        <div class="favo-items">
-            <h3 class="title">FIND YOUR FAVORITES</h3>
-            <div class="list-items">
-                <a href="item.html" class="item">
-                    <img class="img-product" src="./img/item/Griffith.jpg">
-                    <span class="sale">SALE</span>
-                    <p class="name">GRIFFITH (Ivory)</p>
-                    <b class="price">US $92.40</b>
-                </a>
-                <a href="item.html" class="item">
-                    <img class="img-product" src="./img/item/GUELL.png">
-                    <span class="sale">SALE</span>
-                    <p class="name">GUELL (Navy, Men)</p>
-                    <b class="price">US $131.00</b>
-                </a>
-                <a href="item.html" class="item">
-                    <img class="img-product" src="./img/item/LILAC.png">
-                    <span class="sale">SALE</span>
-                    <p class="name">LILAC</p>
-                    <b class="price">US $144.20</b>
-                </a>
-                <a href="item.html" class="item">
-                    <img class="img-product" src="./img/item/REINDEER.png">
-                    <span class="sale">SALE</span>
-                    <p class="name">REINDEER (Ivory)</p>
-                    <b class="price">US $95.20</b>
-                </a>
-            </div>
-        </div>
-        <div class="whats-new">
-            <p class="title-new">WHAT'S NEW?</p>
-            <div class="slider-new">
-                <img src="./img/banner/banner-new.png">
-                <b class="name-collections">
-                    SPRING/SUMMER 2022
-                    <button class="btn-explore">EXPLORE</button>
-                </b>
-            </div>
-        </div>
-        <div class="mix-match">
-            <h3 class="title">MIX AND MATCH</h3>
-            <div class="list-items">
-                <a href="item.html" class="item">
-                    <img class="img-product" src="./img/item/IMG Florence.png">
-                    <p class="name">FLORENCE</p>
-                    <p class="name-desc">(Gold Metal with Green Lens)</p>
-                    <b class="price">US $165.00</b>
-                </a>
-                <a href="item.html" class="item">
-                    <img class="img-product" src="./img/item/IMG STOCKHOLM .png">
-                    <p class="name">STOCKHOLM</p>
-                    <p class="name-desc">(Black&Gold Metal with Green Lens)</p>
-                    <b class="price">US $165.00</b>
-                </a>
-                <a href="item.html" class="item">
-                    <img class="img-product" src="./img/item/IMG FLORENCE Pink.png">
-                    <p class="name">FLORENCE</p>
-                    <p class="name-desc">(Pink Metal With Pink Mirror Lens)</p>
-                    <b class="price">US $189.00</b>
-                </a>
-                <a href="item.html" class="item">
-                    <img class="img-product" src="./img/item/IMG SYDNEY.png">
-                    <p class="name">SYDNEY</p>
-                    <p class="name-desc">(Silver Metal With Gold Mirror Lens)</p>
-                    <b class="price">US $171.00</b>
-                </a>
-            </div>
-        </div>
-        <div class="categories-gender">
-            <div class="for-gender">
-                <img class="img-gender" src="./img/banner/Men.png">
-                <p class="gender-desc">FOR MEN</p>
-                <button class="btn-explore">EXPLORE</button>
-            </div>
-            <div class="for-gender">
-                <img class="img-gender" src="./img/banner/Women.png">
-                <p class="gender-desc">FOR WOMEN</p>
-                <button class="btn-explore">EXPLORE</button>
-            </div>
-        </div>
-    </div>
-    <div class="sign-up">
-        <div class="fill-voucher">
-            <h2 class="title-voucher">GET 10% OFF YOUR FIRST ORDER</h2>
-            <p class="desc-voucher">Sign up to our newsletter to be the first to know about our latest news and
-                exclusive offers and receive a 10% discount code to use on your first order with us.</p>
-            <form action="">
-                <label for="email">EMAIL ADDRESS</label>
-                <input id="email" type="email" name="">
-                <input id="btn-sign-up" type="submit" value="SIGN UP">
-            </form>
-            <div class="read-data">
-                <span class="desc-voucher">Click <a href="">here</a> to read information on how Lyco&Shine processes
-                    your personal data.</span>
-            </div>
-        </div>
-        <div class="connect-social">
-            <a href="" class="social">
-                <img src="./img/social/instagram-brands.svg">
-            </a>
-            <a href="" class="social">
-                <img src="./img/social/facebook-f-brands.svg">
-            </a>
-            <a href="" class="social">
-                <img src="./img/social/twitter-brands.svg">
-            </a>
-            <a href="" class="social">
-                <img src="./img/social/pinterest-p-brands.svg">
-            </a>
-            <a href="" class="social">
-                <img src="./img/social/snapchat-ghost-brands.svg">
-            </a>
-            <a href="" class="social">
-                <img src="./img/social/youtube-brands.svg">
-            </a>
-        </div>
-    </div>
-    <div id="footer">
-        <div class="common-footer">
-            <div class="part">
-                <div class="title">SHOP</div>
-                <ul class="column-list">
-                    <li><a href="">All Eyewear</a></li>
-                    <li><a href="">All Denim</a></li>
-                    <li><a href="stores.html">Stores</a></li>
-                    <li><a href="">Inspiration</a></li>
-                    <li><a href="">Live Shopping</a></li>
-                </ul>
-            </div>
-            <div class="part">
-                <div class="title">SUPPORT</div>
-                <ul class="column-list">
-                    <li><a href="">Help</a></li>
-                    <li><a href="">Contact us</a></li>
-                    <li><a href="">Size information</a></li>
-                    <li><a href="">Shopping guide</a></li>
-                </ul>
-            </div>
-            <div class="part">
-                <div class="title">INFORMATION</div>
-                <ul class="column-list">
-                    <li><a href="">Return Policy</a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Terms of use</a></li>
-                    <li><a href="">Cookies Settings</a></li>
-                </ul>
-            </div>
-            <div class="part">
-                <div class="title">ABOUT US</div>
-                <ul class="column-list">
-                    <li><a href="">Our Story</a></li>
-                    <li><a href="">Career</li>
-                    <li><a href="">LS on Campus</a></li>
-                    <li><a href="">Student</a></li>
-                    <li><a href="">#LSMOMENTS</a></li>
-                    <li><a href="">Sustainability</a></li>
-                </ul>
-            </div>
-            <div class="part">
-                <div class="select-language">
-                    <img src="./img/icon/icon-globe.png" class="icon-globe">
-                    <select>
-                        <option value="0">USA</option>
-                        <option value="0">Vietnam</option>
-                        <option value="0">China</option>
-                        <option value="0">Japan</option>
-                    </select>
-                    <img src="./img/icon/icon-arrow.svg" class="icon-arrow-down">
-                </div>
-            </div>
-            <a href="#" class="btn-arrow-up">
-                <img src="./img/icon/icon-arrow-up.png">
-            </a>
-        </div>
-        <div class="default-footer">
-            <div class="payment-icon">
-                <div class="payment-icon-row">
-                    <img src="./img/payment/visa.png">
-                    <img src="./img/payment/master-card.png">
-                    <img src="./img/payment/amex.png">
-                    <img src="./img/payment/paypal.png">
-                    <img src="./img/payment/diners club.png">
-                </div>
-                <div class="payment-icon-row">
-                    <img src="./img/payment/discover.png">
-                    <img src="./img/payment/maestro.png">
-                    <img src="./img/payment/jcb.png">
-                    <img src="./img/payment/apple pay.png">
-                    <img src="./img/payment/klarna.png">
-                </div>
-            </div>
-            <div class="logo">
-                <img src="./img/logo.png">
-                LYCO&SHINE
-            </div>
-            <p class="copyright">© 2021 Lyco&Shine, INC.</p>
-        </div>
-    </div>
-    <!-- Messenger Chat plugin Code -->
-    <div id="fb-root"></div>
+            <div class="best-seller mt-8 md:mt-12 py-14 bg-[#F5F9FF] font-SailecM text-current">
+                <h2 class="text-center text-[1.75rem] lg:text-[2.5rem] leading-130 py-12">Shop Bestsellers</h2>
+                <div class="relative px-4 overflow-hidden product-scroll sm:px-6 md:px-10 lg:px-15 xl:px-20">
+                    <div class="flex -mx-2 transition-transform duration-700 d-scroll-two-js">
+                        <div
+                            class="leading-142 px-3 min-w-[70%] sm:min-w-[33%] md:min-w-[55%] lg:min-w-[33%] group cursor-pointer">
+                            <div class="relative">
+                                <img class="rounded-md block mb-2.25 lg:mb-2.5 w-full" src="./images/bs1.jpg">
+                                <div class="flex absolute top-1.5 lg:top-2 left-1.5 xl:top-2.25 xl:left-2.25 space-x-1">
+                                    <div
+                                        class="leading-none text-[11px] xl:text-[1rem] bg-[#FCE5FF] px-2 pt-1 pb-0.5 rounded-[50px]">
+                                        Save 20%
+                                    </div>
+                                </div>
+                                <button
+                                    class="btn rounded-[50px] bg-blue hidden xl:block group-hover:opacity-100 opacity-0 border text-base lg:text-[18px] leading-none border-blue text-white transition-all duration-300 absolute mx-5 inset-x-0 bottom-3 px-7.5 py-2 text-center">
+                                    Quick Add
+                                    <span class="mx-1.5">|</span>
+                                    <span>$83</span>
+                                </button>
+                            </div>
+                            <div class="mb-2 lg:mb-2.25 flex">
+                                <div class="flex space-x-0.5">
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="stroke-current fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <span class="text-[#4D6E89] text-xs lg:text-sm ml-2.25 font-Sailec">207
+                                    Reviews</span>
+                            </div>
+                            <a href="" class="flex justify-between text-lg lg:text-xl mb-7 leading-130">
+                                Clean Suite Kit
+                                <span class="text-[#4D6E89]">$83</span>
+                            </a>
+                        </div>
+                        <div
+                            class="leading-142 px-3 min-w-[70%] sm:min-w-[33%] md:min-w-[55%] lg:min-w-[33%] group cursor-pointer">
+                            <div class="relative">
+                                <img class="rounded-md block mb-2.25 lg:mb-2.5 w-full" src="./images/bs2.jpg">
+                                <div class="flex absolute top-1.5 lg:top-2 left-1.5 xl:top-2.25 xl:left-2.25 space-x-1">
+                                    <div
+                                        class="leading-none text-[11px] xl:text-[1rem] bg-[#A7CCFF] px-2 pt-1 pb-0.5 rounded-[50px]">
+                                        Limited Time
+                                    </div>
+                                </div>
+                                <button
+                                    class="btn rounded-[50px] bg-blue hidden xl:block group-hover:opacity-100 opacity-0 border text-base lg:text-[18px] leading-none border-blue text-white transition-all duration-300 absolute mx-5 inset-x-0 bottom-3 px-7.5 py-2 text-center">
+                                    Quick Add
+                                    <span class="mx-1.5">|</span>
+                                    <span>$52</span>
+                                </button>
+                            </div>
+                            <div class="mb-2 lg:mb-2.25 flex">
+                                <div class="flex space-x-0.5">
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="stroke-current fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
 
-    <!-- Your Chat plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
+                                </div>
+                                <span class="text-[#4D6E89] text-xs lg:text-sm ml-2.25 font-Sailec">14,745
+                                    Reviews</span>
+                            </div>
+                            <a href="" class="flex justify-between text-lg lg:text-xl mb-7 leading-130">
+                                The Natural Hand Soap Collection
+                                <span class="text-[#4D6E89]">$52</span>
+                            </a>
+                        </div>
+                        <div
+                            class="leading-142 px-3 min-w-[70%] sm:min-w-[33%] md:min-w-[55%] lg:min-w-[33%] group cursor-pointer">
+                            <div class="relative">
+                                <img class="rounded-md block mb-2.25 lg:mb-2.5 w-full" src="./images/bs3.jpg">
+                                <div class="flex absolute top-1.5 lg:top-2 left-1.5 xl:top-2.25 xl:left-2.25 space-x-1">
+                                    <div
+                                        class="leading-none text-[11px] xl:text-[1rem] bg-[#FFD396] px-2 pt-1 pb-0.5 rounded-[50px]">
+                                        Best Seller</div>
+                                    <div
+                                        class="leading-none text-[11px] xl:text-[1rem] bg-[#FCE5FF] px-2 pt-1 pb-0.5 rounded-[50px]">
+                                        Sale 15%</div>
 
+                                </div>
+                                <button
+                                    class="btn rounded-[50px] hidden xl:block bg-blue group-hover:opacity-100 opacity-0 border text-base lg:text-[18px] leading-none border-blue text-white transition-all duration-300 absolute mx-5 inset-x-0 bottom-3 px-7.5 py-2 text-center">
+                                    Quick Add
+                                    <span class="mx-1.5">|</span>
+                                    <span>$39</span>
+                                </button>
+                            </div>
+                            <div class="mb-2 lg:mb-2.25 flex">
+                                <div class="flex space-x-0.5">
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="stroke-current fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <span class="text-[#4D6E89] text-xs lg:text-sm ml-2.25 font-Sailec">6,252
+                                    Reviews</span>
+                            </div>
+                            <a href="" class="flex justify-between text-lg lg:text-xl mb-7 leading-130">
+                                Clean Essentials Kit
+                                <span class="text-[#4D6E89]">$39</span>
+                            </a>
+                        </div>
+                        <div
+                            class="leading-142 px-3 min-w-[70%] sm:min-w-[33%] md:min-w-[55%] lg:min-w-[33%] group cursor-pointer">
+                            <div class="relative">
+                                <img class="rounded-md block mb-2.25 lg:mb-2.5 w-full" src="./images/bs4.jpg">
+                                <div class="flex absolute top-1.5 lg:top-2 left-1.5 xl:top-2.25 xl:left-2.25 space-x-1">
+                                    <div
+                                        class="leading-none text-[11px] xl:text-[1rem] bg-[#FCE5FF] px-2 pt-1 pb-0.5 rounded-[50px]">
+                                        Save 10%</div>
+                                </div>
+                                <button
+                                    class="btn rounded-[50px] hidden xl:block bg-blue group-hover:opacity-100 opacity-0 border text-base lg:text-[18px] leading-none border-blue text-white transition-all duration-300 absolute mx-5 inset-x-0 bottom-3 px-7.5 py-2 text-center">
+                                    Quick Add
+                                    <span class="mx-1.5">|</span>
+                                    <span>$44</span>
+                                </button>
+                            </div>
+                            <div class="mb-2 lg:mb-2.25 flex">
+                                <div class="flex space-x-0.5">
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="stroke-current fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <span class="text-[#4D6E89] text-xs lg:text-sm ml-2.25 font-Sailec">272
+                                    Reviews</span>
+                            </div>
+                            <a href="" class="flex justify-between text-lg lg:text-xl mb-7 leading-130">
+                                Laundry Essentials Kit
+                                <span class="text-[#4D6E89]">$44</span>
+                            </a>
+                        </div>
+                        <div
+                            class="leading-142 px-3 min-w-[70%] sm:min-w-[33%] md:min-w-[55%] lg:min-w-[33%] group cursor-pointer">
+                            <div class="relative">
+                                <img class="rounded-md block mb-2.25 lg:mb-2.5 w-full" src="./images/bs5.jpg">
+                                <div class="flex absolute top-1.5 lg:top-2 left-1.5 xl:top-2.25 xl:left-2.25 space-x-1">
+                                    <div
+                                        class="leading-none text-[11px] xl:text-[1rem] bg-[#FCE5FF] px-2 pt-1 pb-0.5 rounded-[50px]">
+                                        Save 10%</div>
+                                </div>
+                                <button
+                                    class="btn rounded-[50px] hidden xl:block bg-blue group-hover:opacity-100 opacity-0 border text-base lg:text-[18px] leading-none border-blue text-white transition-all duration-300 absolute mx-5 inset-x-0 bottom-3 px-7.5 py-2 text-center">
+                                    Quick Add
+                                    <span class="mx-1.5">|</span>
+                                    <span>$34</span>
+                                </button>
+                            </div>
+                            <div class="mb-2 lg:mb-2.25 flex">
+                                <div class="flex space-x-0.5">
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="stroke-current fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <span class="text-[#4D6E89] text-xs lg:text-sm ml-2.25 font-Sailec">851
+                                    Reviews</span>
+                            </div>
+                            <a href="" class="flex justify-between text-lg lg:text-xl mb-7 leading-130">
+                                The Dish Duo
+                                <span class="text-[#4D6E89]">$34</span>
+                            </a>
+                        </div>
+                        <div
+                            class="leading-142 px-3 min-w-[70%] sm:min-w-[33%] md:min-w-[55%] lg:min-w-[33%] group cursor-pointer">
+                            <div class="relative">
+                                <img class="rounded-md block mb-2.25 lg:mb-2.5 w-full" src="./images/bs6.jpg">
+                                <div class="flex absolute top-1.5 lg:top-2 left-1.5 xl:top-2.25 xl:left-2.25 space-x-1">
+                                    <div
+                                        class="leading-none text-[11px] xl:text-[1rem] bg-[#F7A390] px-2 pt-1 pb-0.5 rounded-[50px]">
+                                        Special Sale</div>
+                                </div>
+                                <button
+                                    class="btn rounded-[50px] hidden xl:block bg-blue group-hover:opacity-100 opacity-0 border text-base lg:text-[18px] leading-none border-blue text-white transition-all duration-300 absolute mx-5 inset-x-0 bottom-3 px-7.5 py-2 text-center">
+                                    Quick Add
+                                    <span class="mx-1.5">|</span>
+                                    <span>$39</span>
+                                </button>
+                            </div>
+                            <div class="mb-2 lg:mb-2.25 flex">
+                                <div class="flex space-x-0.5">
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="stroke-current fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                    <svg class="w-3.5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="stroke-royal-blue fill-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-royal-blue"
+                                            data-gtm-vis-has-fired-43278271_264="1"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-[#4D6E89] text-xs lg:text-sm ml-2.25 font-Sailec">298
+                                    Reviews</span>
+                            </div>
+                            <a href="" class="flex justify-between text-lg lg:text-xl mb-7 leading-130">
+                                Mickey & Friends Hand Soap Kit
+                                <span class="text-[#4D6E89]">$39</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 w-10 lg:w-15 xl:w-20 bg-gradient-to-r from-white to-transparent">
+                        <button
+                            class="btn-slide-two absolute top-[22%] xs:top-[28%] md:top-[35%] lg:top-[33%] left-1 xs:left-1 sm:left-2.25 p-2">
+                            <div
+                                class="w-7.5 h-7.5 border border-current rounded-[50%] flex items-center justify-center shadow bg-white">
+                                <svg class="w-2" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M-4.96461e-08 4.49991L3.92511 0.574799C4.24261 0.257294 4.75739 0.257294 5.07489 0.574799C5.3924 0.892304 5.3924 1.40708 5.07489 1.72459L2.29957 4.49991L5.07489 7.27523C5.3924 7.59273 5.3924 8.10751 5.07489 8.42501C4.75739 8.74252 4.24261 8.74252 3.92511 8.42501L-4.96461e-08 4.49991Z"
+                                        fill="#003057" class="fill-current"></path>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                    <div
+                        class="absolute top-0 bottom-0 right-0 w-10 lg:w-15 xl:w-20 bg-gradient-to-l from-white to-transparent">
+                        <button
+                            class="btn-slide-two rotate-180 absolute top-[22%] xs:top-[28%] md:top-[35%] lg:top-[33%] right-1 xs:left-1 sm:left-2.25 p-2 transition-all">
+                            <div
+                                class="w-7.5 h-7.5 border border-current rounded-[50%] flex items-center justify-center shadow bg-white">
+                                <svg class="w-2" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M-4.96461e-08 4.49991L3.92511 0.574799C4.24261 0.257294 4.75739 0.257294 5.07489 0.574799C5.3924 0.892304 5.3924 1.40708 5.07489 1.72459L2.29957 4.49991L5.07489 7.27523C5.3924 7.59273 5.3924 8.10751 5.07489 8.42501C4.75739 8.74252 4.24261 8.74252 3.92511 8.42501L-4.96461e-08 4.49991Z"
+                                        fill="#003057" class="fill-current"></path>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="mt-12 mb-12 text-current reviews lg:mt-30 lg:mb-30 font-SailecM">
+                <h3 class="w-full px-11 text-2xl sm:text-[26px] lg:text-[32px] mb-5 xl:mb-7.5 leading-130 text-center">
+                    Over 40,000 5-Star Reviews</h3>
+                <div class="px-4 overflow-hidden sm:px-6">
+                    <div class="flex -mx-2 transition-transform duration-500 scroll-three-js">
+                        <div class="min-w-full px-2 sm:px-4 xl:px-5">
+                            <div class="h-full rounded-md py-12 px-7.5 text-center bg-[#F5F9FF]">
+                                <div class="flex space-x-0.5 justify-center">
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <p class="mt-6 text-base md:text-xl xl:text-2xl max-w-[715px] mx-auto font-Sailec">
+                                    “Each product literally works and cleans perfectly. Obsessed with the dish soap
+                                    and the laundry detergent and best of all no plastic or waste. It truly is life
+                                    changing and I’m so happy I bought this entire package.”</p>
+                                <p class="text-sm md:text-[15px] xl:text-base mt-6">— Kayla M. on <a href=""
+                                        class="underline">Clean Suite Kit</a></p>
+                            </div>
+                        </div>
+                        <div class="min-w-full px-2 sm:px-4 xl:px-5">
+                            <div class="h-full rounded-md py-12 px-7.5 text-center bg-[#fff2dd]">
+                                <div class="flex space-x-0.5 justify-center">
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <p class="mt-6 text-base md:text-xl xl:text-2xl max-w-[715px] mx-auto font-Sailec">
+                                    “Smells amazing. I’d give 10 stars if it was allowed!”</p>
+                                <p class="text-sm md:text-[15px] xl:text-base mt-6">— Michelle W. on <a href=""
+                                        class="underline">Hand Soap Duo</a></p>
+                            </div>
+                        </div>
+                        <div class="min-w-full px-2 sm:px-4 xl:px-5">
+                            <div class="h-full rounded-md py-12 px-7.5 text-center bg-[#fce5ff]">
+                                <div class="flex space-x-0.5 justify-center">
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <p class="mt-6 text-base md:text-xl xl:text-2xl max-w-[715px] mx-auto font-Sailec">
+                                    “LOVE. I am an obsessive cleaner and was nervous about the strength of these
+                                    products. I am extremely pleased with the effectiveness and will definitely be
+                                    buying refills!”</p>
+                                <p class="text-sm md:text-[15px] xl:text-base mt-6">— Savannah K. on <a href=""
+                                        class="underline">Clean Essentials Kit</a></p>
+
+                            </div>
+                        </div>
+                        <div class="min-w-full px-2 sm:px-4 xl:px-5">
+                            <div class="h-full rounded-md py-12 px-7.5 text-center bg-[#F5F9FF]">
+                                <div class="flex space-x-0.5 justify-center">
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <p class="mt-6 text-base md:text-xl xl:text-2xl max-w-[715px] mx-auto font-Sailec">
+                                    “Best addition to my green routine! I love the laundry products! They store in a
+                                    container a fraction of the size of the big plastic jugs, and the laundry comes
+                                    out smelling & looking great! Love the oxy additional product for white-whites
+                                    and clean kids clothes!”</p>
+                                <p class="text-sm md:text-[15px] xl:text-base mt-6">— Molly W. on <a href=""
+                                        class="underline">Laundry Essentials Kit</a></p>
+                            </div>
+
+                        </div>
+                        <div class="min-w-full px-2 sm:px-4 xl:px-5">
+                            <div class="h-full rounded-md py-12 px-7.5 text-center bg-[#fff2dd]">
+                                <div class="flex space-x-0.5 justify-center">
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <p class="mt-6 text-base md:text-xl xl:text-2xl max-w-[715px] mx-auto font-Sailec">
+                                    “I love these products for so many reasons. Environmentally friendly, aesthetic
+                                    bottles, lovely scents. They don't feel super chemically which I love. I'm
+                                    keeping a cleaner home now because I love using these products and I'm using
+                                    them often. Thanks Blueland!”</p>
+                                <p class="text-sm md:text-[15px] xl:text-base mt-6">— Rebecca L. on <a href=""
+                                        class="underline">Clean Essentials Kit</a></p>
+                            </div>
+                        </div>
+                        <div class="min-w-full px-2 sm:px-4 xl:px-5">
+                            <div class="h-full rounded-md py-12 px-7.5 text-center bg-[#fce5ff]">
+                                <div class="flex space-x-0.5 justify-center">
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <p class="mt-6 text-base md:text-xl xl:text-2xl max-w-[715px] mx-auto font-Sailec">
+                                    “Excellent. Impeccable products. These fragrances are my favorite: fresh, clean,
+                                    and subtle. The foam is rich and frothy, leaves a nice sensation on the skin
+                                    (even my super sensitive, allergic skin), and it saves so much plastic from
+                                    becoming contaminant waste! There's nothing not to love.”</p>
+                                <p class="text-sm md:text-[15px] xl:text-base mt-6">— Julieta C. on <a href=""
+                                        class="underline">Hand Soap Duo</a></p>
+                            </div>
+                        </div>
+                        <div class="min-w-full px-2 sm:px-4 xl:px-5">
+                            <div class="h-full rounded-md py-12 px-7.5 text-center bg-[#F5F9FF]">
+                                <div class="flex space-x-0.5 justify-center">
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                    <svg class="w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        data-gtm-vis-has-fired-43278271_264="1">
+                                        <path
+                                            d="M8 1.26414L9.70382 5.22058L9.82125 5.49326L10.1169 5.52068L14.4062 5.9185L11.1699 8.76154L10.9468 8.95749L11.0121 9.24712L11.9592 13.4494L8.25528 11.2501L8 11.0985L7.74472 11.2501L4.04076 13.4494L4.98788 9.24712L5.05315 8.95749L4.83011 8.76154L1.59381 5.9185L5.88313 5.52068L6.17875 5.49326L6.29618 5.22058L8 1.26414Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                        <path
+                                            d="M5.88318 5.52068L6.1788 5.49326L6.29623 5.22058L7.50005 2.42518V11.3954L4.04081 13.4494L4.98793 9.24712L5.05321 8.95749L4.83016 8.76154L1.59387 5.9185L5.88318 5.52068Z"
+                                            class="fill-current stroke-current" data-gtm-vis-has-fired-43278271_264="1">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <p class="mt-6 text-base md:text-xl xl:text-2xl max-w-[715px] mx-auto font-Sailec">
+                                    “I was skeptical at first. A tablet and water? What? I love all of them, multi,
+                                    glass/ mirror, bathroom! Thank you for the genius minds behind this brand!”</p>
+                                <p class="text-sm md:text-[15px] xl:text-base mt-6">— Tracy E. on <a href=""
+                                        class="underline">Clean Essentials Kit</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-7.5 flex justify-center space-x-3">
+                    <button
+                        class="btn-reviews transition-colors w-2.25 h-2.25 rounded-[50%] border border-current"></button>
+                    <button
+                        class="btn-reviews transition-colors w-2.25 h-2.25 rounded-[50%] border border-current"></button>
+                    <button
+                        class="btn-reviews transition-colors w-2.25 h-2.25 rounded-[50%] border border-current"></button>
+                    <button
+                        class="btn-reviews transition-colors w-2.25 h-2.25 rounded-[50%] border border-current"></button>
+                    <button
+                        class="btn-reviews transition-colors w-2.25 h-2.25 rounded-[50%] border border-current"></button>
+                    <button
+                        class="btn-reviews transition-colors w-2.25 h-2.25 rounded-[50%] border border-current"></button>
+                    <button
+                        class="btn-reviews transition-colors w-2.25 h-2.25 rounded-[50%] border border-current"></button>
+                </div>
+            </div>
+            <div class="ads font-SailecM text-current text-center py-12 px-4 xs:px-11 bg-[#f5f9ff]">
+                <h3 class="w-full text-2xl sm:text-[26px] lg:text-[32px] mb-5 xl:mb-7.5 leading-130">
+                    You Can Have It All</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-4 max-w-[62.5rem] mx-auto">
+                    <div class="mx-auto w-30 lg:w-52 mt-7">
+                        <img class="mx-auto w-[4.375rem] md:w-[5.625rem] lg:w-30" src="./images/sub1.png">
+                        <p class="mt-4 text-sm lg:text-base">Scientifically-Proven Clean</p>
+                    </div>
+                    <div class="mx-auto w-30 lg:w-52 mt-7">
+                        <img class="mx-auto w-[4.375rem] md:w-[5.625rem] lg:w-30" src="./images/sub2.png">
+                        <p class="mt-4 text-sm lg:text-base">Conscious Ingredients</p>
+                    </div>
+                    <div class="mx-auto w-30 lg:w-52 mt-7">
+                        <img class="mx-auto w-[4.375rem] md:w-[5.625rem] lg:w-30" src="./images/sub3.png">
+                        <p class="mt-4 ml-0 text-sm lg:text-base">Earth-Friendly Packaging</p>
+                    </div>
+                    <div class="mx-auto w-30 lg:w-52 mt-7">
+                        <img class="mx-auto w-[4.375rem] md:w-[5.625rem] lg:w-30" src="./images/sub4.png">
+                        <p class="mt-4 text-sm lg:text-base">Refills are $2 or less</p>
+                    </div>
+                </div>
+                <p class="text-sm font-HermannSBI mt-12 lg:mt-20 max-w-[425px] mx-auto">All of our products and
+                    packaging are Cradle to Cradle Certified™.</p>
+            </div>
+            <div
+                class="px-4 my-12 text-center text-current explore font-SailecM my-13 lg:my-26 sm:px-6 md:px-10 lg:px-15 xl:px-20">
+                <h3 class="w-full text-[28px] md:text-4xl lg:text-[40px] mb-7.5 xl:mb-12 leading-130">
+                    Explore Our Products</h3>
+                <div
+                    class="grid max-w-screen-lg grid-cols-1 mx-auto md:grid-cols-2 md:gap-x-5 lg:gap-x-18 xl:gap-x-30 gap-y-12">
+                    <div class="mx-auto  w-full max-w-[425px]">
+                        <div
+                            class="relative pt-[100%] mb-4 hover:scale-105 hover:-translate-y-2 transition-transform duration-500 cursor-pointer">
+                            <div class="absolute inset-0 rounded-[50%] bg-[#FFF2DD]"></div>
+                            <img class="absolute inset-0 w-full" src="./images/explore1.png" alt="">
+                        </div>
+                        <h3 class="text-2xl sm:text-[26px] lg:text-[32px] mb-2.25 font-medium leading-130">Starter
+                            Kits</h3>
+                        <p class="text-base">Your new cleaning routine starts here.</p>
+                        <button
+                            class="transition-all duration-300 bg-white rounded-[50px] border border-current px-7.5 py-3 leading-none mt-5 text-base lg:text-lg hover:text-white hover:bg-current">Get
+                            My Kit</button>
+
+                    </div>
+                    <div class="mx-auto w-full max-w-[425px]">
+                        <div
+                            class="relative pt-[100%] mb-4 hover:scale-105 hover:-translate-y-2 transition-transform duration-500 cursor-pointer">
+                            <div class="absolute inset-0 rounded-[50%] bg-[#FFF2DD]"></div>
+                            <img class="absolute inset-0 w-full" src="./images/explore2.png" alt="">
+                        </div>
+                        <h3 class="text-2xl sm:text-[26px] lg:text-[32px] mb-2.25 font-medium leading-130">Refills
+                        </h3>
+                        <p class="text-base">Refill to save money and plastic waste.</p>
+                        <button
+                            class="transition-all duration-300 bg-white rounded-[50px] border border-current px-7.5 py-3 leading-none mt-5 text-base lg:text-lg hover:text-white hover:bg-current">Get
+                            Refills</button>
+                    </div>
+                </div>
+            </div>
+            <div class="px-8 pt-20 text-center list-brand pb-11">
+                <h4
+                    class="uppercase mx-auto inline-block leading-none text-xs sm:text-base font-SailecM text-current pb-0.5 border-b border-b-[#ffd396]">
+                    AS SEEN IN</h4>
+                <div class="flex justify-between w-full overflow-x-auto scrollbar py-11 gap-x-8">
+                    <img class="h-5 px-2 xl:h-6" src="./images/brand/newyork.svg" alt="">
+                    <img class="h-5 px-2 xl:h-6" src="./images/brand/WSJ.svg" alt="">
+                    <img class="h-5 px-2 xl:h-6" src="./images/brand/vogue.svg" alt="">
+                    <img class="h-5 px-2 xl:h-6" src="./images/brand/fast.svg" alt="">
+                    <img class="h-5 px-2 xl:h-6" src="./images/brand/realsimple.svg" alt="">
+                    <img class="h-5 px-2 xl:h-6" src="./images/brand/washington.svg" alt="">
+                    <img class="h-5 px-2 xl:h-6" src="./images/brand/wellgood.svg" alt="">
+                    <img class="h-5 px-2 xl:h-6" src="./images/brand/domino.svg" alt="">
+                    <img class="h-5 px-2 xl:h-6" src="./images/brand/forbes.svg" alt="">
+                </div>
+
+            </div>
+            <div
+                class="turtle grid gap-y-7.5 grid-cols-1 md:grid-cols-2 text-current px-4 sm:px-6 md:px-10 xl:px-20 lg:my-30 my-14">
+                <div class="max-w-[545px]">
+                    <h4
+                        class="uppercase mb-6 inline-block text-xs sm:text-base font-SailecM pb-0.5 border-b leading-none border-b-[#ff90f6]">
+                        OUR MISSION</h4>
+                    <h2 class="text-[28px] lg:text-4xl xl:text-[2.5rem] leading-130 mb-4 font-SailecM">A Cleaner
+                        Tomorrow</h2>
+                    <p class="text-[15px] md:text-base lg:text-lg xl:text-xl font-Sailec">We founded Blueland on the
+                        belief that a cleaner planet starts at home.</p>
+                    <a class="group transition-colors font-SailecM pt-1 text-[13px] mt-4 md:mt-5 flex items-center hover:text-royal-blue hover:fill-royal-blue"
+                        href="">
+                        <span>Read More</span>
+                        <svg class="group-hover:translate-x-3 h-2 inline-block transition-transform duration-500  translate-x-1 mt-0.75"
+                            viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M6 4.49991L2.07489 0.574799C1.75739 0.257294 1.24261 0.257294 0.925107 0.574799C0.607602 0.892304 0.607602 1.40708 0.925107 1.72459L3.70043 4.49991L0.925108 7.27523C0.607603 7.59273 0.607602 8.10751 0.925107 8.42501C1.24261 8.74252 1.75739 8.74252 2.07489 8.42501L6 4.49991Z"
+                                fill="#003057" class="fill-current"></path>
+                        </svg>
+                    </a>
+                </div>
+                <img class="w-full rounded-md" src="./images/turtle.jpg" alt="">
+            </div>
+            <marquee direction="left" scrolldelay="6" scrollamount="10" behavior="scroll"
+                class="flex flex-row overflow-auto bg-[#deeaff] py-3 lg:py-3.5">
+                <div
+                    class="relative flex items-center text-sm leading-none text-current ads-auto gap-x-8 md:text-base font-SailecM">
+                    <div class="flex">
+                        <img class="pr-4" src="./images/trydiskfree.svg" alt="">
+                        <span class="min-w-max">TRY RISK FREE</span>
+                    </div>
+                    <div class="flex">
+                        <img class="pr-4" src="./images/trydiskfree.svg" alt="">
+                        <span class="min-w-max">30 DAY FREE TURN</span>
+                    </div>
+                    <div class="flex">
+                        <img class="pr-4" src="./images/trydiskfree.svg" alt="">
+                        <span class="min-w-max">TRY RISK FREE</span>
+                    </div>
+                    <div class="flex">
+                        <img class="pr-4" src="./images/trydiskfree.svg" alt="">
+                        <span class="min-w-max">30 DAY FREE TURN</span>
+                    </div>
+                    <div class="flex">
+                        <img class="pr-4" src="./images/trydiskfree.svg" alt="">
+                        <span class="min-w-max">TRY RISK FREE</span>
+                    </div>
+                    <div class="flex">
+                        <img class="pr-4" src="./images/trydiskfree.svg" alt="">
+                        <span class="min-w-max">30 DAY FREE TURN</span>
+                    </div>
+                    <div class="flex">
+                        <img class="pr-4" src="./images/trydiskfree.svg" alt="">
+                        <span class="min-w-max">TRY RISK FREE</span>
+                    </div>
+                    <div class="flex">
+                        <img class="pr-4" src="./images/trydiskfree.svg" alt="">
+                        <span class="min-w-max">30 DAY FREE TURN</span>
+                    </div>
+                    <div class="flex">
+                        <img class="pr-4" src="./images/trydiskfree.svg" alt="">
+                        <span class="min-w-max">TRY RISK FREE</span>
+                    </div>
+                    <div class="flex">
+                        <img class="pr-4" src="./images/trydiskfree.svg" alt="">
+                        <span class="min-w-max">30 DAY FREE TURN</span>
+                    </div>
+                    <div class="flex">
+                        <img class="pr-4" src="./images/trydiskfree.svg" alt="">
+                        <span class="min-w-max">TRY RISK FREE</span>
+                    </div>
+                    <div class="flex">
+                        <img class="pr-4" src="./images/trydiskfree.svg" alt="">
+                        <span class="min-w-max">30 DAY FREE TURN</span>
+                    </div>
+                    <div class="flex">
+                        <img class="pr-4" src="./images/trydiskfree.svg" alt="">
+                        <span class="min-w-max">TRY RISK FREE</span>
+                    </div>
+                    <div class="flex">
+                        <img class="pr-4" src="./images/trydiskfree.svg" alt="">
+                        <span class="min-w-max">30 DAY FREE TURN</span>
+                    </div>
+                </div>
+            </marquee>
+            <div class="items-center my-12 text-current md:flex lg:my-24">
+                <div class="flex-shrink-0 px-4 mb-5 font-SailecM sm:px-6 lg:px-15 xl:px-20">
+                    <h2 class="text-[28px] lg:text-[2rem] leading-130">Good Clean Fun</h2>
+                    <a class="flex items-center pt-2 leading-none transition-colors group font-SailecM hover:text-royal-blue hover:fill-royal-blue"
+                        href="">
+                        <span>Follow us on Instagram</span>
+                        <svg class="group-hover:translate-x-3 h-2 inline-block transition-transform duration-500  translate-x-1 mt-0.75"
+                            viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M6 4.49991L2.07489 0.574799C1.75739 0.257294 1.24261 0.257294 0.925107 0.574799C0.607602 0.892304 0.607602 1.40708 0.925107 1.72459L3.70043 4.49991L0.925108 7.27523C0.607603 7.59273 0.607602 8.10751 0.925107 8.42501C1.24261 8.74252 1.75739 8.74252 2.07489 8.42501L6 4.49991Z"
+                                fill="#003057" class="fill-current"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative px-4 overflow-hidden sm:px-6 md:px-10 lg:px-15 xl:px-20">
+                    <div class="flex -mx-2 transition-transform duration-700 scroll-last-js">
+                        <img class="img-slide-last rounded-md max-w-[52%] sm:max-w-[30%] md:max-w-[52%] lg:max-w-[30%]  block mx-2"
+                            src="./images/f1.jpg" alt="">
+                        <img class="rounded-md max-w-[52%] sm:max-w-[30%] md:max-w-[52%] lg:max-w-[30%]  block mx-2"
+                            src="./images/f2.jpg" alt="">
+                        <img class="rounded-md max-w-[52%] sm:max-w-[30%] md:max-w-[52%] lg:max-w-[30%]  block mx-2"
+                            src="./images/f3.jpg" alt="">
+                        <img class="rounded-md max-w-[52%] sm:max-w-[30%] md:max-w-[52%] lg:max-w-[30%]  block mx-2"
+                            src="./images/f4.jpg" alt="">
+                        <img class="rounded-md max-w-[52%] sm:max-w-[30%] md:max-w-[52%] lg:max-w-[30%]  block mx-2"
+                            src="./images/f5.jpg" alt="">
+                        <img class="rounded-md max-w-[52%] sm:max-w-[30%] md:max-w-[52%] lg:max-w-[30%]  block mx-2"
+                            src="./images/f6.jpg" alt="">
+                    </div>
+                    <div
+                        class="absolute inset-0 flex items-center justify-center w-10 bg-gradient-to-r from-white to-transparent lg:w-15 xl:w-20">
+                        <button class="btn-slide-last">
+                            <div
+                                class="w-7.5 h-7.5 border border-current rounded-[50%] flex items-center justify-center shadow bg-white">
+                                <svg class="w-2" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M-4.96461e-08 4.49991L3.92511 0.574799C4.24261 0.257294 4.75739 0.257294 5.07489 0.574799C5.3924 0.892304 5.3924 1.40708 5.07489 1.72459L2.29957 4.49991L5.07489 7.27523C5.3924 7.59273 5.3924 8.10751 5.07489 8.42501C4.75739 8.74252 4.24261 8.74252 3.92511 8.42501L-4.96461e-08 4.49991Z"
+                                        fill="#003057" class="fill-current"></path>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                    <div
+                        class="absolute inset-y-0 right-0 flex items-center justify-center w-10 rotate-180 bg-gradient-to-r from-white to-transparent lg:w-15 xl:w-20">
+                        <button class="btn-slide-last">
+                            <div
+                                class="w-7.5 h-7.5 border border-current rounded-[50%] flex items-center justify-center shadow bg-white">
+                                <svg class="w-2" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M-4.96461e-08 4.49991L3.92511 0.574799C4.24261 0.257294 4.75739 0.257294 5.07489 0.574799C5.3924 0.892304 5.3924 1.40708 5.07489 1.72459L2.29957 4.49991L5.07489 7.27523C5.3924 7.59273 5.3924 8.10751 5.07489 8.42501C4.75739 8.74252 4.24261 8.74252 3.92511 8.42501L-4.96461e-08 4.49991Z"
+                                        fill="#003057" class="fill-current"></path>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="h-2 w-full bg-gradient-to-r from-[#386CFF] via-[#F8E4FF] to-[#88B8F9] "></div>
+            <div
+                class="bg-royal-blue py-7.5 md:pt-10 lg:pt-18 px-4 sm:px-6 md:px-10 lg:px-15 xl:px-20 w-full text-white">
+                <div class="flex flex-col justify-between lg:flex-row font-SailecM gap-x-20">
+                    <div class="w-full mb-11 sm:mb-15 md:mb-20 lg:mb-0 lg:w-1/2 max-w-[450px] ">
+                        <h2 class="leading-130 text-[26px] mb-4">Our emails are zero waste too</h2>
+                        <p class="mb-6 text-[15px] sm:text-base">Subscribe to get exclusive deals, zero waste tips, and
+                            product launches—no spam, no waste.</p>
+                        <form action="" class="text-[15px] sm:text-lg relative">
+                            <input type="text"
+                                class=" rounded-[50px] w-full bg-white text-royal-blue py-3 lg:py-4 pl-6 lg:pl-7"
+                                placeholder="Email Address">
+                            <button type="submit"
+                                class="bg-[#FF90F6] btn absolute rounded-[50px] transition-colors duration-300 border border-[#FF90F6] px-8 inset-y-0 right-0">
+                                <svg width="33" height="15" viewBox="0 0 33 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.7535 12.9324C24.436 13.2499 24.436 13.7646 24.7535 14.0821C25.071 14.3997 25.5858 14.3997 25.9033 14.0821L32.6569 7.32861L25.9033 0.575079C25.5858 0.257574 25.071 0.257574 24.7535 0.575079C24.436 0.892584 24.436 1.40736 24.7535 1.72487L30.3573 7.32861L24.7535 12.9324Z"
+                                        fill="#003057"></path>
+                                    <path
+                                        d="M0 7.32843C0 6.87832 0.364888 6.51343 0.815 6.51343H31V8.14343H0.815001C0.364889 8.14343 0 7.77854 0 7.32843Z"
+                                        fill="#003057"></path>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="justify-between hidden w-full md:flex lg:w-1/2 gap-x-4">
+                        <ul class="space-y-4">
+                            <li class="mb-7.5 text-[13px] sm:text-sm uppercase">Shop</li>
+                            <li><a href="">All</a></li>
+                            <li><a href="">Starter Kits</a></li>
+                            <li><a href="">Refill Packs</a></li>
+                            <li><a href="">Blueland & Disney</a></li>
+                            <li><a href="">Accessibility Tools</a></li>
+                        </ul>
+                        <ul class="space-y-4">
+                            <li class="mb-7.5 text-[13px] sm:text-sm uppercase">ABOUT</li>
+                            <li><a href="">How It Works</a></li>
+                            <li><a href="">Our Mission</a></li>
+                            <li><a href="">Careers</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                        <ul class="space-y-4">
+                            <li class="mb-7.5 text-[13px] sm:text-sm uppercase">Follow</li>
+                            <li><a href="" class="flex items-center"><img class="mr-2.25 w-[15px] h-[15px]"
+                                        src="./images/icon/ins.svg">Instagram</a></li>
+                            <li><a href="" class="flex items-center"><img class="mr-2.25 w-[15px] h-[15px]"
+                                        src="./images/icon/fb.svg">Facebook</a></li>
+                            <li><a href="" class="flex items-center"><img class="mr-2.25 w-[15px] h-[15px]"
+                                        src="./images/icon/tiktok.png">TikTok</a></li>
+                            <li><a href="" class="flex items-center"><img class="mr-2.25 w-[15px] h-[15px]"
+                                        src="./images/icon/twitter.svg">Twitter</a></li>
+                        </ul>
+                    </div>
+                    <div class="grid grid-cols-2 gap-7.5 md:hidden mb-11">
+                        <ul class="space-y-4">
+                            <li class="mb-7.5 text-[13px] sm:text-sm uppercase">Shop</li>
+                            <li><a href="">All</a></li>
+                            <li><a href="">Starter Kits</a></li>
+                            <li><a href="">Refill Packs</a></li>
+                            <li><a href="">Blueland & Disney</a></li>
+                            <li><a href="">Accessibility Tools</a></li>
+                        </ul>
+                        <ul class="space-y-4">
+                            <li class="mb-7.5 text-[13px] sm:text-sm uppercase">ABOUT</li>
+                            <li><a href="">How It Works</a></li>
+                            <li><a href="">Our Mission</a></li>
+                            <li><a href="">Careers</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                        <ul class="space-y-4">
+                            <li class="mb-7.5 text-[13px] sm:text-sm uppercase">Follow</li>
+                            <li><a href="" class="flex items-center"><img class="mr-2.25 w-[15px] h-[15px]"
+                                        src="./images/icon/ins.svg">Instagram</a></li>
+                            <li><a href="" class="flex items-center"><img class="mr-2.25 w-[15px] h-[15px]"
+                                        src="./images/icon/fb.svg">Facebook</a></li>
+                            <li><a href="" class="flex items-center"><img class="mr-2.25 w-[15px] h-[15px]"
+                                        src="./images/icon/tiktok.png">TikTok</a></li>
+                            <li><a href="" class="flex items-center"><img class="mr-2.25 w-[15px] h-[15px]"
+                                        src="./images/icon/twitter.svg">Twitter</a></li>
+                        </ul>
+                        <ul class="">
+                            <li class="mb-7.5 text-[13px] sm:text-sm uppercase">GOOD STUFF</li>
+                            <li class="inline-block"><img class="w-14" src="./images/icon/certified.png" alt=""></li>
+                            <li class="inline-block ml-4"><img class="w-14" src="./images/icon/certified2.png" alt="">
+                            </li>
+                        </ul>
+                        <ul class="space-y-4 font-Sailec text-[13px] sm:text-sm">
+                            <li><a href="">hello@blueland.com</a></li>
+                            <li><a href="">Terms & Conditions</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="items-end justify-between hidden space-x-4 md:flex font-Sailec">
+                    <div class="flex space-x-9">
+                        <img class="max-w-[3.75rem]" src="./images/icon/certified.png" alt="">
+                        <img class="max-w-[3.75rem]" src="./images/icon/certified2.png" alt="">
+                    </div>
+                    <ul class="space-y-4font-Sailec space-x-9 text-[13px] lg:text-sm flex">
+                        <li>Copyright 2022 Blueland</li>
+                        <li>hello@blueland.com</li>
+                        <li>Terms & Conditions</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+                <p class="font-Sailec text-[13px] sm:text-sm text-center md:hidden">Copyright 2022 Blueland</p>
+            </div>
+        </footer>
+    </div>
     <script>
-        var chatbox = document.getElementById('fb-customer-chat');
-        chatbox.setAttribute("page_id", "105850018433290");
-        chatbox.setAttribute("attribution", "biz_inbox");
+        var btnShop = document.getElementById('btn-shop');
+        var menuMobile = document.querySelector('.menu-mobile');
+        var subMenuMobile = document.querySelector('.sub-menu-mobile');
+        var subMenu = document.querySelector('.sub-menu');
+        var btnShopRotate = document.getElementById('btn-shop-rotate');
+        var menuMobileIcon = document.getElementsByClassName('icon-change');
+        var isFalse = false;
 
-        window.fbAsyncInit = function () {
-            FB.init({
-                xfbml: true,
-                version: 'v12.0'
+        btnShop.onclick = function() {
+            isFalse = !isFalse;
+            subMenu.style.display = (isFalse) ? 'grid' : 'none';
+            btnShopRotate.style.transform = (isFalse) ? 'rotate(180deg)' : '';
+        }
+
+        menuMobile.onclick = function() {
+            isFalse = !isFalse;
+            subMenuMobile.style.display = (isFalse) ? 'block' : 'none';
+            document.body.classList.toggle('fixed-position');
+
+            menuMobileIcon[0].classList.toggle('rotate-45');
+            menuMobileIcon[0].classList.toggle('translate-y-2');
+            menuMobileIcon[1].classList.toggle('hidden');
+            menuMobileIcon[2].classList.toggle('-rotate-45');
+            menuMobileIcon[2].classList.toggle('-translate-y-2');
+        }
+
+        function topBtnControls() {
+            const btnControls = document.querySelectorAll('.btn-control');
+            var video = document.querySelector('.video-scroll');
+            var heightVideo = video.clientHeight;
+
+            Array.from(btnControls).forEach(element => {
+                element.style.top = Number(heightVideo / 2.2) + 'px';
             });
-        };
+        }
 
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+        topBtnControls();
+
+        const mobileSlide1 = document.querySelector('.mobile-slide-soap');
+        var currentIndex = 0;
+
+        var btnPrev = document.querySelectorAll('.btn-control')[0];
+        var btnNext = document.querySelectorAll('.btn-control')[1];
+        var btnCurrent = document.querySelectorAll('.btn-current');
+        var btnReviews = document.querySelectorAll('.btn-reviews');
+        var scroll2 = document.querySelector('.scroll-three-js');
+
+        btnCurrent[currentIndex].style.backgroundColor = '#4D6E89';
+
+        var reviewsIndex = 0;
+        btnReviews[reviewsIndex].style.backgroundColor = '#4D6E89';
+
+        btnReviews.forEach(function (element, index) {
+            element.onclick = function () {
+                btnReviews.forEach(item => item.style.backgroundColor = '#FFFFFF');
+                reviewsIndex = index;
+                scroll2.style.transform = 'translateX(' + (-index * 100) + '%)';
+                btnReviews[index].style.backgroundColor = '#4D6E89';
+            }
+        })
+
+
+        btnCurrent.forEach(function (element, index) {
+            element.onclick = function () {
+                btnCurrent.forEach(item => item.style.backgroundColor = '#FFFFFF');
+                currentIndex = index;
+                btnCircle1();
+            }
+        })
+
+
+        function btnCircle1() {
+            if (currentIndex == 0) mobileSlide1.style.transform = 'translateX(12.5%)';
+            else if (currentIndex == 1) mobileSlide1.style.transform = 'translateX(-62.5%)';
+            else if (currentIndex == 2) mobileSlide1.style.transform = 'translateX(-137.5%)';
+
+            btnPrev.disabled = (currentIndex == 0) ? true : false;
+            btnPrev.style.opacity = (currentIndex == 0) ? '50%' : '100%';
+            btnNext.disabled = (currentIndex == 2) ? true : false;
+            btnNext.style.opacity = (currentIndex == 2) ? '50%' : '100%';
+
+            btnCurrent.forEach(item => item.style.backgroundColor = '#FFFFFF');
+            btnCurrent[currentIndex].style.backgroundColor = '#4D6E89';
+        }
+
+        btnNext.addEventListener('click', function () {
+            currentIndex++;
+            btnCircle1();
+
+        })
+
+        btnPrev.addEventListener('click', function () {
+            currentIndex--;
+            btnCircle1();
+        })
+
+        var slideIndex = 0;
+        autoSlider();
+
+        function autoSlider() {
+            var slide = document.querySelectorAll('.auto-slide-js');
+            Array.from(slide).forEach(item => item.style.display = 'none');
+            slide[slideIndex].style.display = 'flex';
+            slideIndex++;
+
+            if (slideIndex > slide.length - 1) slideIndex = 0;
+        }
+
+        setInterval('autoSlider()', 5000);
+
+        var btnPrev2 = document.querySelectorAll('.btn-slide-two')[0];
+        var btnNext2 = document.querySelectorAll('.btn-slide-two')[1];
+
+        const btnPrev3 = document.querySelectorAll('.btn-slide-last')[0];
+        const btnNext3 = document.querySelectorAll('.btn-slide-last')[1];
+        const slide3 = document.querySelector('.scroll-last-js');
+
+        var indexSlide3 = 0;
+
+        window.onload = function () {
+            var widthSlide3 = document.querySelector('.img-slide-last').clientWidth;
+            console.log(widthSlide3);
+            btnPrev3.addEventListener('click', function () {
+                indexSlide3--;
+                Slide3(widthSlide3, 3, indexSlide3);
+            })
+            btnNext3.addEventListener('click', function () {
+                indexSlide3++;
+                Slide3(widthSlide3, 3, indexSlide3);
+            })
+        }
+
+        function Slide3(width, lastIndex, index) {
+            console.log(index);
+            slide3.style.transform = 'translateX(' + (-index * width) + 'px)';
+            btnPrev3.disabled = (index == 0) ? true : false;
+            btnPrev3.style.opacity = (index == 0) ? '50%' : '100%';
+            btnNext3.disabled = (index == lastIndex) ? true : false;
+            btnNext3.style.opacity = (index == lastIndex) ? '50%' : '100%';
+        }
+
+
+        var dIndexSlide2 = 0;
+        var mIndexSlide2 = 0;
+        const dScroll2 = document.querySelector('.d-scroll-two-js');
+
+        const x = window.matchMedia('(min-width: 768px)');
+
+        function myFunction(x) {
+            if (x.matches) {
+                btnPrev2.disabled = true;
+                btnPrev2.style.opacity = '50%';
+                btnPrev2.addEventListener('click', function () {
+                    dIndexSlide2--;
+                    Slide2(32.5, 3, dIndexSlide2);
+                })
+
+                btnNext2.addEventListener('click', function () {
+                    dIndexSlide2++;
+                    Slide2(32.5, 3, dIndexSlide2);
+                })
+            }
+            else {
+                btnPrev2.addEventListener('click', function () {
+                    mIndexSlide2--;
+                    Slide2(50, 3, mIndexSlide2);
+                })
+
+                btnNext2.addEventListener('click', function () {
+                    mIndexSlide2++;
+                    Slide2(50, 3, mIndexSlide2);
+                })
+            }
+        }
+
+        myFunction(x);
+        x.addListener(myFunction);
+
+
+        function Slide2(widthScroll, lastIndex, index) {
+            console.log(index);
+            dScroll2.style.transform = 'translateX(' + (-index * widthScroll) + '%)';
+
+            btnPrev2.disabled = (index == 0) ? true : false;
+            btnPrev2.style.opacity = (index == 0) ? '50%' : '100%';
+            btnNext2.disabled = (index == lastIndex) ? true : false;
+            btnNext2.style.opacity = (index == lastIndex) ? '50%' : '100%';
+
+        }
     </script>
 </body>
 

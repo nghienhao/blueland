@@ -1,0 +1,102 @@
+@font-face {
+    font-family: SailecRegular;
+    src: url(../fonts/SailecRegular.woff2);
+}
+
+@font-face {
+    font-family: SailecMedium;
+    src: url(../fonts/SailecMedium.woff2);
+}
+
+@font-face {
+    font-family: HermannSB;
+    src: url(../fonts/HermannSemiBold.woff2);
+}
+
+@font-face {
+    font-family: HermannSBI;
+    src: url(../fonts/HermannSemiBoldItalic.woff2);
+}
+
+body {
+    font-family: inherit;
+}
+
+::selection {
+    background: #DEEAFF;
+}
+
+header {
+    font-family: 'SailecMedium';
+}
+
+button.btn:hover, a.btn:hover {
+    background: linear-gradient(to right, #DEEAFF, #FCE5FF, #FFF2DD);
+    color: #003057;
+    border: 1px solid #003057;
+}
+
+.logo:hover path {
+    fill: #26459B;
+}
+
+/* Fading animation */
+
+.fade1 {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 0.4s;
+    animation-name: fade;
+    animation-duration: 0.4s;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+  /* Hide scrollbar */
+  .scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+
+.scrollbar {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+    overflow-x: auto;
+  }
+
+  .fixed-position {
+    position: fixed;
+ }
+
+ input:focus::placeholder {
+    color: transparent;
+  }
+
+.products-hiw {
+    background: linear-gradient(rgb(255, 255, 255) 9.75%, rgb(255, 242, 221) 58.16%, rgb(255, 255, 255) 100%)
+}
+
+.products-hiw-2 {
+    background: linear-gradient(rgb(255, 255, 255) 9.75%, rgb(222, 234, 255) 58.16%, rgb(255, 255, 255) 100%);
+}
+
+.products-hiw-3 {
+    background: linear-gradient(rgb(255, 255, 255) 9.75%, rgb(252, 229, 255) 58.16%, rgb(255, 255, 255) 100%);
+}
+
+.question {
+    background: linear-gradient(rgb(252, 229, 255) 0%, rgb(255, 242, 221) 67.71%, rgb(255, 242, 221) 94.79%);
+}

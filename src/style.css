@@ -1,0 +1,19 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+
+@layer components {
+    .absolute-center {
+      @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+    }
+
+    .leading-142 {
+        line-height: 1.42 !important;
+    }
+
+    .leading-130 {
+        line-height: 1.3 !important;
+    }
+
+    .btn-info {
+      @apply text-current border-b border-navy-blue;
+    }
+  }
