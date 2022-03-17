@@ -851,7 +851,7 @@
                         </div>
                     </div>
                     <div class="absolute inset-0 w-10 lg:w-15 xl:w-20 bg-gradient-to-r from-white to-transparent">
-                        <button
+                        <button disabled
                             class="btn-slide-two absolute top-[22%] xs:top-[28%] md:top-[35%] lg:top-[33%] left-1 xs:left-1 sm:left-2.25 p-2">
                             <div
                                 class="w-7.5 h-7.5 border border-current rounded-[50%] flex items-center justify-center shadow bg-white">
@@ -1831,7 +1831,8 @@
 
         window.onload = function () {
             var widthSlide3 = document.querySelector('.img-slide-last').clientWidth;
-            console.log(widthSlide3);
+            btnPrev3.disabled = true;
+            btnPrev3.style.opacity = '0.5';
             btnPrev3.addEventListener('click', function () {
                 indexSlide3--;
                 Slide3(widthSlide3, 3, indexSlide3);
@@ -1857,6 +1858,7 @@
         const dScroll2 = document.querySelector('.d-scroll-two-js');
 
         const x = window.matchMedia('(min-width: 768px)');
+        const y = window.matchMedia('(min-width: 1024px)')
 
         function myFunction(x) {
             if (x.matches) {
@@ -1873,15 +1875,29 @@
                 })
             }
             else {
-                btnPrev2.addEventListener('click', function () {
-                    mIndexSlide2--;
-                    Slide2(50, 3, mIndexSlide2);
-                })
-
-                btnNext2.addEventListener('click', function () {
-                    mIndexSlide2++;
-                    Slide2(50, 3, mIndexSlide2);
-                })
+                btnPrev2.disabled = true;
+                btnPrev2.style.opacity = '50%';
+                if (y.matches) {
+                    btnPrev2.addEventListener('click', function () {
+                        mIndexSlide2--;
+                        Slide2(66.6, 3, mIndexSlide2);
+                    })
+    
+                    btnNext2.addEventListener('click', function () {
+                        mIndexSlide2++;
+                        Slide2(50, 2, mIndexSlide2);
+                    })
+                } else {
+                    btnPrev2.addEventListener('click', function () {
+                        mIndexSlide2--;
+                        Slide2(50, 2, mIndexSlide2);
+                    })
+    
+                    btnNext2.addEventListener('click', function () {
+                        mIndexSlide2++;
+                        Slide2(50, 2, mIndexSlide2);
+                    })
+                }
             }
         }
 
